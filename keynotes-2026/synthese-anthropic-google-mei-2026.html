@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Anthropic en Google, dezelfde dag, twee strategieën — Business Data Solutions</title>
+  <meta name="description" content="Synthese van de Anthropic- en Google-keynotes van 19 mei 2026: wat ze samen vertellen over de richting van AI voor het MKB. Inclusief volledige brontabellen.">
+  <style>
+    :root {
+      --primary: #d4db3e;
+      --supporting: #1a1a1a;
+      --cream: #f5f0e6;
+      --bg-yellow: #fafbf0;
+      --bg-cream: #f5f0e6;
+      --bg-cream-2: #f0ebe0;
+      --bg-off-white: #f9f8f4;
+      --text-primary: #111827;
+      --text-secondary: #4b5563;
+      --text-muted: #6b7280;
+      --bg-page: #ffffff;
+      --bg-section: #f9fafb;
+      --border: #e5e7eb;
+      --border-strong: #d1d5db;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --radius-full: 9999px;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.04), 0 2px 6px rgba(0,0,0,0.04);
+      --shadow-md: 0 2px 4px rgba(0,0,0,0.06), 0 8px 16px rgba(0,0,0,0.06);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--bg-page);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a {
+      color: var(--text-primary);
+      text-decoration: underline;
+      text-decoration-color: var(--primary);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    a:hover { background: var(--bg-yellow); }
+
+    .page {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .page-wide {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 1.5rem 5rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-primary);
+      font-weight: 700;
+      padding: 0.35rem 0.8rem;
+      background: transparent;
+      border: 1px solid var(--primary);
+      border-radius: 9999px;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      max-width: 22ch;
+    }
+
+    h1 em {
+      font-style: normal;
+      background: var(--primary);
+      padding: 0 0.2em;
+      border-radius: 4px;
+    }
+
+    .lead {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      max-width: 60ch;
+      line-height: 1.5;
+      margin: 0 0 1rem;
+    }
+
+    .meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Body */
+    h2 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin: 3.5rem 0 0.5rem;
+    }
+
+    h2:first-of-type { margin-top: 0; }
+
+    h2 .section-num {
+      display: inline-block;
+      font-family: 'SF Mono', Monaco, Consolas, monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      margin-right: 0.6em;
+      vertical-align: middle;
+      border: 1px solid var(--border);
+      border-radius: 9999px;
+      padding: 0.15em 0.6em;
+    }
+
+    h3 {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+      max-width: 70ch;
+    }
+
+    ul, ol {
+      margin: 0 0 1rem;
+      padding-left: 1.5rem;
+      max-width: 70ch;
+    }
+
+    li { margin-bottom: 0.4rem; }
+
+    strong { font-weight: 600; }
+
+    /* Synthesis card */
+    .synthesis {
+      background: var(--bg-cream);
+      border-radius: 12px;
+      padding: 2rem 2.25rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .synthesis h2 {
+      margin: 0 0 1rem;
+      font-size: 1.25rem;
+    }
+
+    .synthesis ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    .synthesis li {
+      margin-bottom: 0.6rem;
+      line-height: 1.55;
+    }
+
+    /* Evidence card pair */
+    .evidence-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .evidence-card {
+      background: var(--bg-page);
+      border: 1px solid var(--border);
+      border-left-width: 4px;
+      border-radius: 8px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .evidence-card.anthropic { border-left-color: var(--supporting); }
+    .evidence-card.google { border-left-color: var(--border-strong); }
+
+    .evidence-card h3 {
+      margin: 0 0 0.5rem;
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    .evidence-card ul {
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .evidence-card li {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* Implication block */
+    .implication {
+      border-left: 4px solid var(--primary);
+      padding: 0.25rem 1.25rem;
+      margin: 1.25rem 0 0.5rem;
+      background: var(--bg-yellow);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .implication p {
+      margin: 0.75rem 0;
+    }
+
+    .implication strong {
+      display: block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-primary);
+      margin-bottom: 0.25rem;
+      font-weight: 700;
+    }
+
+    /* Advice block (MKB-frame) */
+    .advice-list {
+      list-style: none;
+      padding: 0;
+      margin: 1.5rem 0;
+    }
+
+    .advice-list li {
+      padding: 1.25rem 1.5rem;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      background: var(--bg-page);
+    }
+
+    .advice-list .advice-title {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      font-size: 1.05rem;
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--supporting);
+      color: #f5f0e6;
+      padding: 2.5rem 2.5rem;
+      border-radius: 16px;
+      margin: 4rem 0 2rem;
+    }
+
+    .cta h2 {
+      color: #ffffff;
+      margin: 0 0 1rem;
+      font-size: 1.5rem;
+    }
+
+    .cta p {
+      color: #e5e0d6;
+      max-width: 60ch;
+    }
+
+    .cta a.cta-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: var(--primary);
+      color: var(--supporting);
+      padding: 0.85rem 1.5rem;
+      border-radius: 9999px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .cta a.cta-link:hover {
+      background: #e8ee5e;
+      color: var(--supporting);
+    }
+
+    /* Appendices */
+    .appendix-divider {
+      margin: 5rem 0 2rem;
+      padding-top: 3rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .appendix-divider .eyebrow-line {
+      display: inline-block;
+      font-family: 'SF Mono', Monaco, Consolas, monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .appendix-divider h2 {
+      margin: 0 0 0.5rem;
+    }
+
+    .appendix-divider .appendix-meta {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin: 0 0 1.5rem;
+      max-width: 80ch;
+    }
+
+    .appendix-divider .appendix-meta a {
+      text-decoration-thickness: 1px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      margin: 1rem 0 2rem;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .bds-table {
+      border-collapse: collapse;
+      font-size: 0.875rem;
+      width: 100%;
+      min-width: 880px;
+      background: var(--bg-page);
+    }
+
+    .bds-table th,
+    .bds-table td {
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.7rem;
+      vertical-align: top;
+      text-align: left;
+      line-height: 1.5;
+    }
+
+    .bds-table thead th {
+      background: var(--supporting);
+      color: var(--cream);
+      font-weight: 600;
+      border-color: var(--supporting);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .bds-table tr.section td {
+      background: var(--bg-cream);
+      font-weight: 600;
+      border-left: 3px solid var(--primary);
+      color: var(--text-primary);
+    }
+
+    .bds-table code {
+      font-family: 'SF Mono', Monaco, Consolas, monospace;
+      font-size: 0.9em;
+      background: var(--bg-section);
+      padding: 0.1em 0.35em;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+    }
+
+    .bds-table .recap {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.85em;
+    }
+
+    .bds-table .note {
+      color: var(--text-muted);
+      font-size: 0.85em;
+    }
+
+    /* Customer datapoints note */
+    .customer-note {
+      background: var(--bg-section);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      margin: 1rem 0 2rem;
+    }
+
+    .customer-note strong { color: var(--text-primary); }
+
+    /* Footer */
+    .blog-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .blog-footer p { max-width: none; margin: 0.25rem auto; }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+      h1 { font-size: 2rem; }
+      .page { padding: 2rem 1rem 3rem; }
+      .page-wide { padding: 0 1rem 3rem; }
+      .evidence-pair { grid-template-columns: 1fr; }
+      .synthesis { padding: 1.5rem; }
+      .cta { padding: 1.75rem; }
+      .cta a.cta-link { display: block; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<article class="page">
+
+  <header class="hero">
+    <span class="eyebrow">Marktanalyse · mei 2026</span>
+    <h1>Anthropic en Google, <em>dezelfde dag</em>, twee strategieën</h1>
+    <p class="lead">
+      Op 19 mei 2026 kondigden Anthropic 18 en Google in totaal 82 vernieuwingen aan op hun keynotes. Hieronder lees je wat de twee samen vertellen over de richting van AI — en wat dat betekent voor jouw bedrijf.
+    </p>
+    <p class="meta">Gepubliceerd 20 mei 2026 · 10 minuten lezen · Witek ten Hove, Business Data Solutions</p>
+  </header>
+
+  <section class="synthesis" aria-label="Executive synthese">
+    <h2>De synthese in vijf minuten</h2>
+    <ul>
+      <li>Beide leveranciers zetten <strong>agenten als eerste-klas burger</strong> neer — geen chat-uitbreiding meer, maar werkdieren die taken zelfstandig uitvoeren.</li>
+      <li>Anthropic kiest voor <strong>oordeelsvermogen</strong>. Hun Mythos-model las de complete OpenBSD-broncode en vond daar een kwetsbaarheid die 27 jaar lang door geen mens of statische analyse was opgemerkt.</li>
+      <li>Google kiest voor <strong>schaal en snelheid</strong>. Gemini 3.5 Flash is ongeveer 4× sneller dan andere frontier-modellen en kost minder dan de helft; binnen hun eigen Antigravity-omgeving zelfs 12× sneller.</li>
+      <li>De ontwikkelaar-stack loopt opmerkelijk <strong>parallel</strong>: aan beide kanten een desktop-app, een CLI en een SDK voor het bouwen van eigen agenten.</li>
+      <li>Google rolt AI uit <strong>op nieuwe hardware</strong> (Android Halo, audio- en displaybrillen via Samsung, Gentle Monster en Warby Parker); Anthropic blijft bewust cloud- en software-only.</li>
+      <li>Google bouwt een <strong>commercie-laag</strong> (Universal Cart, Agent Payments Protocol, Universal Commerce Protocol met Amazon, Meta, Microsoft, Salesforce en Stripe); Anthropic bouwt een <strong>engineering-snelheidslaag</strong> (Routines, Autofix, Advisor-pattern).</li>
+      <li>Beide spelers leunen op een <strong>modelhiërarchie</strong> (Opus / Sonnet / Haiku tegenover Pro / Flash / Nano). Kosten zijn niet langer een rekening — ze zijn een ontwerpkeuze geworden.</li>
+    </ul>
+  </section>
+
+  <h2><span class="section-num">01</span>De agent gaat van demo naar werkdier</h2>
+  <p>
+    Tot 2025 was een AI-agent vooral een demo: leuk op het podium, broos in productie. Op 19 mei werd het anders. Beide leveranciers presenteerden infrastructuur waarop agenten langdurig en betrouwbaar werk doen — niet meer per gesprek, maar per opdracht. Het verschil zit in waar de agent draait en wie het beheer doet.
+  </p>
+
+  <div class="evidence-pair">
+    <div class="evidence-card anthropic">
+      <h3>Anthropic — bewijs</h3>
+      <ul>
+        <li>Claude Managed Agents draaien voortaan ook op <em>jouw</em> eigen server. Eerste-klas integratie met Daytona, Cloudflare, Vercel en Modal als sandbox-provider.</li>
+        <li>MCP-tunnels openen een veilige verbinding naar agenten zonder dat je je interne netwerk via het publieke internet hoeft te ontsluiten.</li>
+        <li>Asana bouwde "AI Teammates" bovenop deze laag — agenten die samen met mensen werken in Asana-projecten.</li>
+        <li>Anthropic noemt een "10× sneller naar productie" met deze stack en een interne verdubbeling van het aantal pull requests per ontwikkelaar.</li>
+      </ul>
+    </div>
+    <div class="evidence-card google">
+      <h3>Google — bewijs</h3>
+      <ul>
+        <li>Managed Agents in de Gemini API leveren in één API-call een agent <em>plus</em> een door Google gehoste, geïsoleerde Linux-sandbox. Vroege klanten: Ramp, Resemble AI, Klipy.</li>
+        <li>Gemini Spark draait 24/7 op een dedicated Google Cloud-VM voor consumenten. Sluit je laptop, taken lopen door.</li>
+        <li>Antigravity SDK geeft ontwikkelaars dezelfde harness op hun eigen infrastructuur, inclusief subagenten die parallel werken aan deeltaken.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="implication">
+    <strong>Wat betekent dit voor jou</strong>
+    <p>
+      Een agent is geen experiment meer. Als jouw organisatie nu nog losse chat-prompts gebruikt om werk gedaan te krijgen, loop je achter op het tempo dat klanten verwachten. De vraag is niet meer of agenten werken; de vraag is welke werkstroom je als eerste structureel automatiseert. Begin klein — één duidelijk afgebakende, herhalende taak — en bouw daar de bewaking en de fail-safe omheen voordat je opschaalt.
+    </p>
+  </div>
+
+  <h2><span class="section-num">02</span>Modelhiërarchie als kostenkeuze</h2>
+  <p>
+    Beide leveranciers leveren nu een familie van modellen op verschillende prijspunten in plaats van één vlaggenschip. Dat is geen marketing — het is een uitnodiging om je werk te ontleden naar wat veel oordeel vraagt en wat veel volume vraagt. De praktijkvoorbeelden in beide keynotes laten zien dat dit niet theoretisch is.
+  </p>
+
+  <div class="evidence-pair">
+    <div class="evidence-card anthropic">
+      <h3>Anthropic — bewijs</h3>
+      <ul>
+        <li>Opus 4.7 voor zware redenering, Sonnet en Haiku voor het grovere werk. Mythos preview als kijkje vooruit.</li>
+        <li>Het Advisor-patroon laat een klein model uitvoeren en alleen bij twijfel een groter model om raad vragen — implementatie via de <code>tools</code>-array op de Messages API, geen herbouw nodig.</li>
+        <li>EvenUp Legal rapporteert <strong>vijfvoudige kostenreductie</strong> bij gelijkblijvende kwaliteit door op deze manier te splitsen.</li>
+        <li>Rakuten meldt 3× meer afgeronde productietaken op Opus 4.7; Intuit ziet het model zijn eigen denkfouten opvangen tijdens het plannen.</li>
+      </ul>
+    </div>
+    <div class="evidence-card google">
+      <h3>Google — bewijs</h3>
+      <ul>
+        <li>Gemini 3.5 Pro (zwaar), Flash (snel en goedkoop) en Nano 4 (op het apparaat zelf).</li>
+        <li>Flash haalt circa 1.500 tokens per seconde op de nieuwe TPU 8i — ongeveer 4× sneller dan andere frontier-modellen, voor minder dan de helft van de prijs.</li>
+        <li>In Antigravity loopt diezelfde Flash 12× sneller dankzij optimalisatie voor agent-werklasten.</li>
+        <li>Een demonstratie liet een agent in 12 uur een werkend besturingssysteem bouwen: 93 parallelle subagenten, 15.000 model-aanvragen, 2,6 miljard tokens — voor minder dan $1.000 aan API-kosten.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="implication">
+    <strong>Wat betekent dit voor jou</strong>
+    <p>
+      Kies bewust welk werk welk model verdient. Het sterkste model gebruiken voor elke taak is verspilling; het zwakste model gebruiken voor kritieke beslissingen is risico. Een eenvoudige vuistregel: het grote model bepaalt de aanpak, het kleine model voert uit. Voor MKB-organisaties is dit het verschil tussen een AI-rekening die op je marge drukt en een AI-rekening die in de ruis verdwijnt.
+    </p>
+  </div>
+
+  <h2><span class="section-num">03</span>Ontwikkelaarservaring — pariteit, andere keuzes</h2>
+  <p>
+    Anthropic en Google leverden op dezelfde dag opmerkelijk vergelijkbare gereedschappen voor ontwikkelaars: een desktop-app, een CLI en een SDK. Daaronder zit echter een andere wedstrijd: Anthropic mikt op autonomie binnen het ontwikkelproces (de agent fixt de PR zelf), Google mikt op breedte (van schetsontwerp tot productie binnen één omgeving).
+  </p>
+
+  <div class="evidence-pair">
+    <div class="evidence-card anthropic">
+      <h3>Anthropic — bewijs</h3>
+      <ul>
+        <li>Claude Code Desktop, Claude Code CLI en de VS Code-extensie — allemaal op dezelfde Agent SDK.</li>
+        <li>Routines: configureer eenmaal en Claude Code loopt op een rooster, via een webhook of op een API-aanroep. Boris Cherny noemde het "een hogere-orde prompt".</li>
+        <li>Autofix en CI-Autofix bewaken een geopende PR tot productie — repareren CI-fouten, lossen merge-conflicten op, verwerken review-opmerkingen, herbouwen waar nodig.</li>
+        <li>Mercado Libre (23.000 ontwikkelaars) rapporteert 500.000 PRs beoordeeld met menselijke borging en mikt op 90 procent autonome code in een agent-gedreven PR-lus voor Q3 2026.</li>
+      </ul>
+    </div>
+    <div class="evidence-card google">
+      <h3>Google — bewijs</h3>
+      <ul>
+        <li>Antigravity 2.0 als "agent-first" desktop-app, plus Antigravity CLI en SDK voor eigen infrastructuur.</li>
+        <li>Vanuit AI Studio met één klik naar Cloud Run — een werkende URL zonder creditcard voor nieuwe gebruikers.</li>
+        <li>Stitch genereert in één prompt een complete UI; in het afgelopen jaar werden er 100 miljoen schermen mee gemaakt.</li>
+        <li>Chrome DevTools for Agents sluit de lus: agenten observeren runtime-gedrag, draaien Lighthouse en herzien hun werk zonder dat een mens informatie hoeft over te tikken.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="implication">
+    <strong>Wat betekent dit voor jou</strong>
+    <p>
+      Als jouw bedrijf software laat ontwikkelen — eigen team of leverancier — verandert het kostenplaatje van die ontwikkeling de komende twaalf maanden ingrijpend. Vraag je leverancier hoe ze nu agenten inzetten en wat dat voor jouw factuur betekent. Vraag je interne team welke routines ze al hebben opgezet. Het is geen optionele opmerking meer; het is een kerncompetentie.
+    </p>
+  </div>
+
+  <h2><span class="section-num">04</span>Hardware-AI tegenover cloud-AI</h2>
+  <p>
+    Dit is het thema waar de twee leveranciers het scherpst uit elkaar lopen. Google maakt van AI een fysiek product dat je draagt; Anthropic blijft expliciet binnen de software-laag. Dat is geen technische beperking — het is een strategische keuze met grote gevolgen voor wie hun klant is.
+  </p>
+
+  <div class="evidence-pair">
+    <div class="evidence-card anthropic">
+      <h3>Anthropic — bewijs</h3>
+      <ul>
+        <li>Geen eigen hardware aangekondigd. Het mobiele kanaal is Claude Code op iOS en Android als afstandsbediening voor cloud-sessies — laptop dicht, werk loopt door.</li>
+        <li>Alle infrastructuur loopt via de Claude Developer Platform en partners (Daytona, Vercel, Cloudflare, Modal).</li>
+        <li>De focus blijft op het ontwikkelaarsdomein en op zakelijke werkstromen waarin oordeel telt.</li>
+      </ul>
+    </div>
+    <div class="evidence-card google">
+      <h3>Google — bewijs</h3>
+      <ul>
+        <li>Android Halo: een nieuw thuis voor agenten op de telefoon, naast Spark in de cloud.</li>
+        <li>Eerste audio-bril (samen met Samsung, Gentle Monster en Warby Parker) — najaar 2026 — werkt op Android én iOS.</li>
+        <li>Display-bril met informatie in het glas (vertaling, navigatie, glanceable widgets) — uitbreiding van het tester-programma later in 2026.</li>
+        <li>Android XR-platform als gedeelde basis voor headsets en brillen, geoptimaliseerd voor Qualcomm-Snapdragon.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="implication">
+    <strong>Wat betekent dit voor jou</strong>
+    <p>
+      Als jouw klanten of medewerkers met telefoons werken, raakt dit jouw bedrijf binnen 12 tot 18 maanden direct. Een agent op een Android-telefoon die een afspraak inplant of een bestelling plaatst, is geen science-fiction meer. Voor de zorgsector, logistiek, detailhandel en zakelijke dienstverlening betekent dat: ontwerp nu je processen alsof er een AI-agent naast de gebruiker staat, niet alsof de gebruiker altijd handmatig elke stap zet.
+    </p>
+  </div>
+
+  <h2><span class="section-num">05</span>Commercie en handelen in de echte wereld</h2>
+  <p>
+    Dit is het thema waar Anthropic helemaal niets aankondigt en Google een serieuze gok plaatst. Google bouwt een laag waarmee agenten kunnen kopen, betalen en transacties afronden — met juridische dekking, traceerbaarheid en gestandaardiseerde protocollen. Als die laag aanslaat, verandert dat hoe webwinkels en marktplaatsen klanten bereiken.
+  </p>
+
+  <div class="evidence-pair">
+    <div class="evidence-card anthropic">
+      <h3>Anthropic — bewijs</h3>
+      <ul>
+        <li>Geen commercie- of betalingsproducten in deze keynote.</li>
+        <li>De focus blijft op interne werkstromen voor ontwikkeling, beoordeling en beveiliging van code.</li>
+      </ul>
+    </div>
+    <div class="evidence-card google">
+      <h3>Google — bewijs</h3>
+      <ul>
+        <li>Universal Cart: één winkelmandje over meerdere winkels heen, bovenop Google Wallet. Vult zich vanuit Search, Gemini, YouTube en Gmail.</li>
+        <li>Agent Payments Protocol (AP2): regels en grenzen waarbinnen een agent namens jou mag betalen — merk, product, maximaal bedrag. Met een onveranderbaar digitaal mandaat voor terugkoppeling en geschillen.</li>
+        <li>Universal Commerce Protocol (UCP) als open standaard, ondertekend door Amazon, Meta, Microsoft, Salesforce en Stripe. Uitrol in Canada, Australië en het Verenigd Koninkrijk in de komende maanden.</li>
+        <li>Search Information Agents: 24/7 op de achtergrond op zoek naar wat jij hebt gespecificeerd — biotech-aandelen onder een bepaalde koers, woningen, schaarse producten.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="implication">
+    <strong>Wat betekent dit voor jou</strong>
+    <p>
+      Als je een webshop of een dienst met online aankoop hebt: je klant zit straks niet meer op jouw site. Een agent zit op jouw site, namens je klant. Dat verandert je conversie-trechter compleet. Stel jezelf nu twee vragen. Een: is mijn productinformatie machine-leesbaar genoeg dat een agent goede beslissingen kan nemen? Twee: hoe regel ik retouren en service als de eerste contactlaag een agent is?
+    </p>
+  </div>
+
+  <h2><span class="section-num">06</span>Veiligheid, kwaliteit en zelf-verbetering</h2>
+  <p>
+    Allebei investeren ze in agenten die hun eigen werk controleren. De accenten verschillen — Google legt het accent op veiligheidsbevindingen in code, Anthropic op leren uit eigen ervaringen — maar de richting is dezelfde: het oordeel verschuift gedeeltelijk van mens naar machine, met menselijke borging eromheen.
+  </p>
+
+  <div class="evidence-pair">
+    <div class="evidence-card anthropic">
+      <h3>Anthropic — bewijs</h3>
+      <ul>
+        <li>Code Review verstuurt een team van agenten over alle codewijzigingen om kritieke bugs op te sporen. Volgens Anthropic in dagelijks gebruik bij duizenden bedrijven, inclusief alle interne teams.</li>
+        <li>Claude Security scant 's nachts complete codebases en rangschikt kwetsbaarheden naar ernst.</li>
+        <li>Dreaming: agenten lezen hun eigen eerdere transcripten terug om zichzelf te verbeteren — een vorm van leren door reflectie.</li>
+        <li>Outcomes laat je het doel definiëren en Claude itereert zelfstandig naar dat resultaat toe.</li>
+      </ul>
+    </div>
+    <div class="evidence-card google">
+      <h3>Google — bewijs</h3>
+      <ul>
+        <li>CodeMender API: een frontier-agent die kritieke kwetsbaarheden automatisch vindt en oplost. Selecte testers nu, breder later.</li>
+        <li>SynthID-watermerk uitgebreid met OpenAI, ElevenLabs en Kakao — bewegingen naar een industrie-brede herkomststandaard.</li>
+        <li>SynthID en Content Credentials toegankelijk in Search en Chrome via "Circle to Search" en rechtsklik — eindgebruikers kunnen zelf controleren of een afbeelding of video AI-gegenereerd is.</li>
+        <li>Lighthouse heeft een nieuwe categorie "agentic browsing" die controleert of een site begrijpelijk is voor agenten.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="implication">
+    <strong>Wat betekent dit voor jou</strong>
+    <p>
+      Twee dingen. Eén: agenten die hun eigen werk controleren maken het mogelijk om volume aan te kunnen dat eerder onmogelijk was — code-scans, factuurcontroles, contractbeoordelingen. Twee: herkomst van inhoud (was deze foto echt, schreef de mens dit?) wordt een aantoonbare eigenschap, geen aanname. Voor sectoren waar bewijs telt — zorg, recht, onderwijs, accountancy — verschuift de bewijslast.
+    </p>
+  </div>
+
+  <h2><span class="section-num">07</span>Drie concrete adviezen voor jouw MKB</h2>
+  <p>
+    Genoeg synthese. Wat doe je morgen anders?
+  </p>
+
+  <ul class="advice-list">
+    <li>
+      <span class="advice-title">Kies je modelhiërarchie bewust</span>
+      Niet altijd het sterkste model. Splits je werk in "denken" en "doen" en kies per stap. Het Advisor-patroon bij EvenUp Legal bespaarde een factor vijf op de kosten zonder dat de kwaliteit daalde. Dat is geen bijzonderheid — dat is goed ingericht.
+    </li>
+    <li>
+      <span class="advice-title">Bouw nu agent-werkstromen, geen chat-experimenten</span>
+      Beide leveranciers benadrukken hetzelfde signaal: een agent is geen losse opdracht meer, het is een terugkerende werkstroom. Kies één concrete, herhalende taak in jouw bedrijf — orderbevestigingen, urenverwerking, contractbeoordeling — en zet daar een agent op met duidelijke begrenzing en een mens als achtervang.
+    </li>
+    <li>
+      <span class="advice-title">Houd hardware-AI op de radar</span>
+      Brillen en de Android Halo komen in 2026 op de markt. Als jouw klanten met de telefoon werken — en dat doen ze meestal — moet je over twee jaar een antwoord hebben op de vraag wat een AI-agent op die telefoon namens hen mag doen. Begin niet morgen met de implementatie; begin morgen wel met het gesprek.
+    </li>
+  </ul>
+
+  <section class="cta">
+    <h2>Wil je hier scherp op blijven?</h2>
+    <p>
+      Stuur me jouw lastigste AI-vraag in één zin. Geen verkoopgesprek, geen lange demo — een concrete reactie op een concrete situatie. Vaak weten we binnen een paar dagen of er een werkend prototype mogelijk is, en wat de eerste stap zou zijn.
+    </p>
+    <a class="cta-link" href="https://businessdatasolutions.nl">Plan een korte intake — businessdatasolutions.nl</a>
+  </section>
+
+</article>
+
+<section class="page-wide">
+
+  <div class="appendix-divider">
+    <span class="eyebrow-line">Bijlage A · brontabel</span>
+    <h2>Code with Claude London 2026 — 18 aankondigingen</h2>
+    <p class="appendix-meta">
+      Bron: <a href="https://youtu.be/6amLO7I9xdg">Code with Claude London 2026: Opening Keynote</a>, Anthropic, 19 mei 2026 (46:27). Sprekers: Boris (opening), Lisa (research PM), Angela en Caitlyn (Claude platform), Cat en Boris Cherny (Claude Code). Tabelinhoud is integraal overgenomen uit het bronbestand in het Engels om feitelijke nauwkeurigheid te bewaren; "Global" is de standaard tenzij anders vermeld. Items met "(recap)" waren al eerder gelanceerd.
+    </p>
+
+    <div class="table-wrap">
+      <table class="bds-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Announcement</th>
+            <th>Short description</th>
+            <th>Availability</th>
+            <th>Regions</th>
+            <th>Subscription / access</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="section"><td colspan="6">Models (Lisa — Research PM)</td></tr>
+
+          <tr>
+            <td>1</td>
+            <td><strong>Opus 4.7</strong> <span class="recap">(recap)</span></td>
+            <td>Anthropic's current frontier model. Reported customer wins: AMP moved its "smart mode" to Opus 4.7 after internal benchmark outperformance and simplified its tooling; Rakuten saw 3× more production engineering tasks resolved vs the previous model; Intuit saw Opus 4.7 catching its own logical faults during planning and accelerating execution. Opus 4.7 powers Claude Design (Anthropic Labs).</td>
+            <td>Already shipped — currently the frontier model</td>
+            <td>Global (via Claude API and products)</td>
+            <td>Claude API, Claude Code, Claude.ai</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td><strong>Mythos preview</strong></td>
+            <td>Next-generation model in preview, mentioned three times as a peer of Opus 4.7. Capability anchor: Mythos read the entire OpenBSD source tree and found a 27-year-old vulnerability that every prior human reviewer, fuzzer and static analyser had missed. Used by the keynote as the forward-looking signal that future Claude models will be "more capable than Opus 4.7 and even Mythos preview".</td>
+            <td>Preview (no GA date stated)</td>
+            <td>Global (preview cohort)</td>
+            <td>Preview access (gating not specified)</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td><strong>Claude Design (by Anthropic Labs)</strong> <span class="recap">(recap)</span></td>
+            <td>Anthropic Labs product powered by Opus 4.7. Customers reportedly build production interfaces in a single sitting; Lisa notes Opus 4.7 "has a taste for visual design".</td>
+            <td>Already launched</td>
+            <td>Global</td>
+            <td>Anthropic Labs</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td><strong>Forward-looking model capabilities</strong> <span class="note">(forecast)</span></td>
+            <td>Three named direction areas for upcoming Claude generations: higher judgment and code taste (trust models with complex autonomous engineering); effectively infinite context windows (continuous long-horizon work without losing core intent); multi-agent coordination (teams of agents tackling goals too big for one agent).</td>
+            <td>Forecast — no dates</td>
+            <td>n/a</td>
+            <td>n/a</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Claude Platform — Claude Managed Agents (Angela &amp; Caitlyn)</td></tr>
+
+          <tr>
+            <td>5</td>
+            <td><strong>Advisor strategy</strong> <span class="recap">(recently shipped)</span></td>
+            <td>API pattern that splits execution from advising. A smaller model (Haiku or Sonnet class) executes; when it needs help it reaches out to a larger model (Opus) for advice. Implemented by updating the <code>tools</code> array on the Messages API — no rebuild required. EvenUp Legal reported "frontier model quality at 5× lower cost". Best for premium product paths and high-volume agentic workloads where ROI matters.</td>
+            <td>Available now</td>
+            <td>Global</td>
+            <td>Claude API (Messages API)</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td><strong>Claude Managed Agents</strong> <span class="recap">(recap, with new features below)</span></td>
+            <td>Agentic harness paired with production-grade infrastructure. Reported to let teams ship "10× faster" and reach production-grade agents in days, not months. Anchor customer: Asana built AI Teammates on Managed Agents so humans collaborate with agents directly inside Asana projects.</td>
+            <td>Already launched</td>
+            <td>Global</td>
+            <td>Claude Developer Platform</td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td><strong>Multi-agent orchestration / Outcomes / Dreaming</strong> <span class="recap">(recently shipped)</span></td>
+            <td>Three Managed Agents upgrades shipped recently: <em>Multi-agent orchestration</em> (build fleets of agents); <em>Outcomes</em> (specify what success looks like, Claude iterates to get there); <em>Dreaming</em> (Claude introspects its own previous transcripts to learn and self-improve).</td>
+            <td>Available now</td>
+            <td>Global</td>
+            <td>Claude Managed Agents</td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td><strong>Self-hosted sandboxes</strong> — new today</td>
+            <td>Claude Managed Agents now execute work on <em>your</em> server, not just Anthropic's. When the agent needs to run code or edit files, it puts a work item on a queue that your provider picks up and spins up a sandbox in your own account. First-class integration support for Daytona, Cloudflare, Vercel and Modal sandboxes.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Claude Managed Agents (+ your sandbox provider account)</td>
+          </tr>
+
+          <tr>
+            <td>9</td>
+            <td><strong>MCP tunnels</strong> — new today</td>
+            <td>Lets Managed Agents reach MCP servers that live behind your firewall on your private network — no public-internet exposure. You set up a gateway on your private network and establish a secure connection to Anthropic; agents call MCP servers via <code>tunnel.anthropic.com</code> URLs. Configured directly in the Claude Developer Console.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Claude Managed Agents + Claude Developer Console</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Claude Code (Cat &amp; Boris Cherny)</td></tr>
+
+          <tr>
+            <td>10</td>
+            <td><strong>Claude Code Desktop app</strong> — new updates today</td>
+            <td>Full-screen graphical interface for Claude Code. Built-in previews, sidebar control plane, image and rich-output rendering. Single unified view across local sessions and cloud sessions with visual indicators of which agents are running, blocked, or need input. Built on the Claude Agent SDK.</td>
+            <td>Latest updates available today</td>
+            <td>Global</td>
+            <td>Claude Code subscription</td>
+          </tr>
+
+          <tr>
+            <td>11</td>
+            <td><strong>Claude Agents view (CLI)</strong> — new</td>
+            <td>New surface for Claude Code users who prefer the terminal. Single-pane view of what's running, what's waiting on you, and what's done. Inline reply to unblock, and jump in and out of sessions without losing your place.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Claude Code subscription</td>
+          </tr>
+
+          <tr>
+            <td>12</td>
+            <td><strong>Code Review product</strong> <span class="recap">(recap)</span></td>
+            <td>Deploys a team of agents to traverse all code changes and auxiliary files looking for critical bugs. "Thousands of companies use this every day, including every internal Anthropic team."</td>
+            <td>Already shipped</td>
+            <td>Global</td>
+            <td>Claude Code</td>
+          </tr>
+
+          <tr>
+            <td>13</td>
+            <td><strong>Claude Code on iOS &amp; Android (Remote Control)</strong> <span class="recap">(recap)</span></td>
+            <td>Fire off Claude Code tasks from your phone — leave the laptop closed, walk outside, still ship work.</td>
+            <td>Already shipped</td>
+            <td>Global (mobile)</td>
+            <td>Claude Code</td>
+          </tr>
+
+          <tr>
+            <td>14</td>
+            <td><strong>Autofix (PRs)</strong> <span class="recap">(recap)</span></td>
+            <td>Listens for flaky CI, code-review comments and merge conflicts on your open PR and proactively fixes them so the PR stays green without manual babysitting.</td>
+            <td>Already shipped</td>
+            <td>Global</td>
+            <td>Claude Code</td>
+          </tr>
+
+          <tr>
+            <td>15</td>
+            <td><strong>Routines</strong> — new</td>
+            <td>Configure once and Claude Code runs on a schedule, in response to a webhook, or on an arbitrary API call. Demoed in the keynote as the way a new GitHub issue gets a working PR overnight without anyone prompting. Boris frames Routines as a "higher-order prompt" — you write the routine that prompts Claude, instead of prompting Claude yourself. Runs locally or on remote cloud compute.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Claude Code subscription</td>
+          </tr>
+
+          <tr>
+            <td>16</td>
+            <td><strong>CI autofix (in Claude Code Desktop)</strong> — new</td>
+            <td>Watches a PR that a session just opened and "babysits the PR to production" — autofixes code review and security review comments, autofixes CI failures, auto-rebases on merge conflicts. Demo example: a network-timeout CI failure that the routine diagnosed as a known infra issue and retried. In the Claude Code codebase, Anthropic configures it to fix the root cause instead of just retrying.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Claude Code Desktop</td>
+          </tr>
+
+          <tr>
+            <td>17</td>
+            <td><strong>Claude Security</strong> <span class="recap">(recap)</span></td>
+            <td>Overnight codebase scan that flags vulnerabilities ranked by severity and lets you kick off Claude Code to address each. Addresses the bottleneck where security teams can't keep up with the volume of code landing.</td>
+            <td>Already shipped</td>
+            <td>Global</td>
+            <td>Claude Code / Claude Platform</td>
+          </tr>
+
+          <tr>
+            <td>18</td>
+            <td><strong>VS Code IDE extension</strong> <span class="recap">(recap)</span></td>
+            <td>IDE extension giving the same agent as the CLI but with visual follow-along of code changes as the agent works. Built on the Claude Agent SDK — the same SDK external developers build on.</td>
+            <td>Already shipped</td>
+            <td>Global</td>
+            <td>Claude Code</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+
+    <p class="customer-note">
+      <strong>Genoemde klant-cijfers in de keynote</strong> (context, geen aankondigingen):
+      Spotify (achtergrond-agent op Claude Code voor migratie van duizenden repositories; meer dan 1.000 PRs per maand naar productie; ongeveer 90 procent migratietijd-reductie);
+      Binti (Felicia Curcuru, software voor pleegzorg — 20 dagen korter doorlooptijd op het licentieproces voor pleeggezinnen via de Claude API);
+      Shopify (Claude Code in volle breedte geadopteerd, ook buiten engineering);
+      Mercado Libre (23.000 ontwikkelaars; meer dan 500.000 PRs beoordeeld met menselijke borging; meer dan 9.000 apps gemoderniseerd; mikkend op 90 procent autonome code in een agent-gedreven PR-lus voor Q3 2026, aldus Oscar Mowen);
+      Asana (AI Teammates bovenop Claude Managed Agents);
+      EvenUp Legal (Advisor-patroon → frontier-kwaliteit tegen vijfvoudig lagere kosten);
+      Anthropic intern (verdubbeling van het aantal PRs per ontwikkelaar na brede Claude Code-adoptie).
+    </p>
+  </div>
+
+  <div class="appendix-divider">
+    <span class="eyebrow-line">Bijlage B · brontabel</span>
+    <h2>Google I/O 2026 Keynote — 46 aankondigingen</h2>
+    <p class="appendix-meta">
+      Bron: <a href="https://www.youtube.com/live/wYSncx9zLIU">Google I/O '26 Keynote</a>, Google, 19 mei 2026 (1:51:15). Tabelinhoud is integraal overgenomen uit het bronbestand in het Engels om feitelijke nauwkeurigheid te bewaren. Waar de keynote geen regio noemde, staat "Not specified in keynote". Items die ook in de Developer Keynote terugkomen, zijn gemarkeerd met <strong>[also in dev keynote]</strong>.
+    </p>
+
+    <div class="table-wrap">
+      <table class="bds-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Announcement</th>
+            <th>Short description</th>
+            <th>Availability</th>
+            <th>Regions</th>
+            <th>Subscription / access</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="section"><td colspan="6">Chapter 1 — Opening (infrastructure, conversational AI, voice)</td></tr>
+
+          <tr>
+            <td>1</td>
+            <td><strong>TPU 8t (training) and TPU 8i (inference)</strong></td>
+            <td>Eighth generation of Google's custom AI silicon, now split into two specialised dies. 8t targets large-scale pre-training and is ~3× the raw compute of the previous generation. 8i targets inference latency, with a live demo of an upcoming Gemini Flash hitting ~1,500 tokens/sec. Both chips deliver up to 2× better performance-per-watt. JAX + Pathways now scale training across multiple data centres and over 1 million TPUs globally.</td>
+            <td>Announced at Cloud Next; recapped here</td>
+            <td>Google Cloud (global)</td>
+            <td>Google Cloud customers</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td><strong>Ask YouTube</strong></td>
+            <td>Conversational query layer over YouTube. Returns digestible overviews, the most relevant videos for your context, jumps directly to the relevant part of a video, and remembers context for follow-up questions (with comparison tables when useful).</td>
+            <td>Testing now; broad rollout this summer</td>
+            <td>United States</td>
+            <td>Free (YouTube)</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td><strong>Docs Live</strong></td>
+            <td>Voice-driven Doc creation in Google Docs — verbally brain-dump intent, pull in source material from Drive and Gmail, and let Gemini draft and iterate the document. Demoed creating a talk outline in real time without typing.</td>
+            <td>Rolling out this summer; same voice capabilities coming to Gmail and Google Keep at the same time</td>
+            <td>Not specified in keynote</td>
+            <td>Google AI Pro and Ultra subscribers</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 2 — Gemini Omni (world models, provenance)</td></tr>
+
+          <tr>
+            <td>4</td>
+            <td><strong>Gemini Omni Flash</strong></td>
+            <td>First model in the new Omni "world model" family that creates anything from any input — starting with video generation and conversational video editing. Steps up simulation of intuitive physics (kinetic energy, gravity) and lets you edit a user-supplied video in natural language. Omni Pro coming soon.</td>
+            <td>Launching today across Google products</td>
+            <td>Wherever Gemini products are available</td>
+            <td>See specific product rows for tier gating (e.g. Gemini app: Plus/Pro/Ultra)</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td><strong>SynthID + Content Credentials Verification in Search and Chrome</strong></td>
+            <td>SynthID watermark (already on 100B images/videos and 60,000 years of audio) and Content Credentials provenance check now reachable via Circle to Search and right-click in Chrome. Returns whether content was AI-generated or camera-captured, and whether it was edited with generative AI.</td>
+            <td>Expanding to Search and Chrome</td>
+            <td>Wherever Search + Chrome are available</td>
+            <td>Free</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td><strong>New SynthID adopters: OpenAI, Kakao, ElevenLabs</strong></td>
+            <td>Three additional partners join NVIDIA (added last year) in watermarking their AI-generated content with SynthID, pushing toward an industry-wide provenance standard.</td>
+            <td>Announced today</td>
+            <td>Global</td>
+            <td>n/a (partner programme)</td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td><strong>Gemini 3.5 Flash</strong></td>
+            <td>New "frontier intelligence combined with action" model. Better than 3.1 Pro on almost every benchmark, with a large jump on GDPval (real-world economically valuable tasks). Roughly 4× the output speed of other frontier models on the intelligence-vs-speed frontier, at less than half the price of comparable frontier models. Co-optimised with the Antigravity harness.</td>
+            <td>Available today across products and APIs</td>
+            <td>Wherever Gemini products / APIs are available</td>
+            <td>Gemini API + consumer products</td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td><strong>Gemini 3.5 Pro</strong></td>
+            <td>Higher-capability counterpart to 3.5 Flash; already in internal use at Google with reported large improvements.</td>
+            <td>Coming next month (~June 2026)</td>
+            <td>Not specified in keynote</td>
+            <td>Gemini API + consumer products (tier gating TBC)</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 3 — Google Antigravity</td></tr>
+
+          <tr>
+            <td>9</td>
+            <td><strong>Antigravity 2.0 desktop app</strong> [also in dev keynote]</td>
+            <td>"Agent-first" desktop application built around the agent conversation, agent-produced artifacts and multi-agent orchestration. Powered by Gemini 3.5 Flash co-optimised with the Antigravity Harness. New harness primitives: subagents, hooks, asynchronous task management. Demoed building an entire functional operating system in 12 hours: 93 parallel subagents, 15,000+ model requests, 2.6B tokens, under $1,000 of API credits.</td>
+            <td>Available globally today</td>
+            <td>Global</td>
+            <td>Free; Gemini API usage applies</td>
+          </tr>
+
+          <tr>
+            <td>10</td>
+            <td><strong>Antigravity CLI</strong> [also in dev keynote]</td>
+            <td>Terminal-native counterpart to Antigravity 2.0 with the same harness and models. Rolled out to all Gemini CLI users.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Free</td>
+          </tr>
+
+          <tr>
+            <td>11</td>
+            <td><strong>Antigravity SDK</strong> [also in dev keynote]</td>
+            <td>Programmatic access to the Gemini-optimised agent harness for deployment on your own infrastructure.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Free SDK; API charges apply</td>
+          </tr>
+
+          <tr>
+            <td>12</td>
+            <td><strong>Native voice support in Antigravity (Gemini audio models)</strong></td>
+            <td>Voice-driven interaction with agents inside Antigravity 2.0 and the CLI, using the latest Gemini audio-understanding models.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Antigravity</td>
+          </tr>
+
+          <tr>
+            <td>13</td>
+            <td><strong>Subagent teamwork (research preview)</strong></td>
+            <td>Mechanism behind the OS-in-12-hours demo: an agent breaks a complex task into a plan and runs parallel subagents that generate, execute and iterate on their own tests.</td>
+            <td>Early research preview today in Antigravity</td>
+            <td>Global</td>
+            <td>Antigravity</td>
+          </tr>
+
+          <tr>
+            <td>14</td>
+            <td><strong>12× faster Flash in Antigravity</strong></td>
+            <td>Sundar's 4× speedup of Gemini 3.5 Flash vs other frontier models is extended to 12× inside Antigravity, optimised for the token-heavy nature of agentic coding.</td>
+            <td>Available starting today</td>
+            <td>Global</td>
+            <td>Antigravity</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 4 — Gemini Spark (consumer agent) &amp; pricing</td></tr>
+
+          <tr>
+            <td>15</td>
+            <td><strong>Gemini Spark</strong></td>
+            <td>Personal AI agent for consumers. Runs 24/7 on dedicated Google Cloud VMs — close your laptop and tasks keep executing. Powered by Gemini 3.5 + Antigravity Harness. Integrates with Google's own tools first, then third-party tools via MCP in the coming weeks. Reachable in the Gemini app and, soon, via email and chat.</td>
+            <td>Trusted testers this week; beta for US Google AI Ultra subscribers next week</td>
+            <td>United States (beta)</td>
+            <td>Google AI Ultra</td>
+          </tr>
+
+          <tr>
+            <td>16</td>
+            <td><strong>New Google AI Ultra plan — $100/month</strong></td>
+            <td>New lower-priced Ultra tier introduced to widen access to Spark and other agentic features.</td>
+            <td>Available now</td>
+            <td>Wherever Google AI is sold</td>
+            <td>Google AI Ultra (new tier)</td>
+          </tr>
+
+          <tr>
+            <td>17</td>
+            <td><strong>Top-tier Ultra price drop — $250 → $200/month</strong></td>
+            <td>Existing maximum-limits Ultra plan dropped from $250/month to $200/month.</td>
+            <td>Effective now</td>
+            <td>Wherever Google AI is sold</td>
+            <td>Google AI Ultra (top tier)</td>
+          </tr>
+
+          <tr>
+            <td>18</td>
+            <td><strong>Gemini Spark in Chrome (agentic browser)</strong></td>
+            <td>Spark will operate directly inside Chrome, taking action across the web on the user's behalf and under their direction.</td>
+            <td>Later this summer 2026</td>
+            <td>Not specified in keynote</td>
+            <td>Google AI Ultra (expected)</td>
+          </tr>
+
+          <tr>
+            <td>19</td>
+            <td><strong>Android Halo</strong></td>
+            <td>New dedicated home base for agents on Android phones — the on-device counterpart to Spark.</td>
+            <td>Coming later in 2026</td>
+            <td>Not specified in keynote</td>
+            <td>Android</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 5 — Search</td></tr>
+
+          <tr>
+            <td>20</td>
+            <td><strong>AI Mode upgraded to Gemini 3.5</strong></td>
+            <td>AI Mode (1B+ MAU; queries doubling every quarter) now runs on Gemini 3.5.</td>
+            <td>Today</td>
+            <td>Global (where AI Mode is available)</td>
+            <td>Free</td>
+          </tr>
+
+          <tr>
+            <td>21</td>
+            <td><strong>New intelligent Search box</strong></td>
+            <td>First major reshape of the Search box in 25 years. Expands as you type with AI-powered suggestions that go beyond autocomplete (proposing nuances you didn't think to add). Accepts text, images, files and video, and reasons across modalities.</td>
+            <td>Starting to roll out today</td>
+            <td>Global</td>
+            <td>Free</td>
+          </tr>
+
+          <tr>
+            <td>22</td>
+            <td><strong>Unified AI Search experience (AI Overviews + AI Mode)</strong></td>
+            <td>Seamless flow from a question on the Search results page into deeper follow-ups in AI Mode while preserving context, links and sources.</td>
+            <td>Live today</td>
+            <td>Global (desktop and mobile)</td>
+            <td>Free</td>
+          </tr>
+
+          <tr>
+            <td>23</td>
+            <td><strong>Search Information Agents</strong></td>
+            <td>Spin up multiple 24/7 background agents in Search, each watching for specific information — e.g. biotech stocks under a P/E threshold, apartment listings against your criteria, sneaker drops from named athletes — and pushing synthesised updates with hyper-relevant content.</td>
+            <td>This summer 2026</td>
+            <td>Not specified in keynote</td>
+            <td>Free (in Search)</td>
+          </tr>
+
+          <tr>
+            <td>24</td>
+            <td><strong>Generative UI in Search (Antigravity-powered)</strong></td>
+            <td>Search plans and codes the ideal response from scratch — dynamic layouts, interactive widgets, custom visualisations (demo: gravitational-wave simulator built on the fly). Antigravity provides the secure containerised execution environment.</td>
+            <td>Rolling out to Search this summer</td>
+            <td>Global</td>
+            <td>Free for everyone</td>
+          </tr>
+
+          <tr>
+            <td>25</td>
+            <td><strong>Search custom stateful mini-apps</strong></td>
+            <td>Search can build a full personalised app on the fly (the demo: a weekend planner that syncs to your Calendar, Gmail, Photos and can be shared with your spouse). Connects to Personal Intelligence sources securely.</td>
+            <td>Coming months, starting with subscribers</td>
+            <td>Not specified in keynote</td>
+            <td>Google AI subscribers first</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 5 (cont.) — Agentic Commerce</td></tr>
+
+          <tr>
+            <td>26</td>
+            <td><strong>Universal Commerce Protocol (UCP) — new partners and verticals</strong></td>
+            <td>Open-source standard for agentic commerce ("HTTP for the agent web of shopping"). New founding partners: Amazon, Meta, Microsoft, Salesforce, Stripe. Extending coverage to hotels, local food delivery, YouTube and more products.</td>
+            <td>Announced today; new regions in the coming months</td>
+            <td>Expanding UCP-powered experiences to Canada, Australia, UK in the coming months</td>
+            <td>Open standard</td>
+          </tr>
+
+          <tr>
+            <td>27</td>
+            <td><strong>Agent Payments Protocol (AP2)</strong></td>
+            <td>Lets an AI agent pay on your behalf within strict, user-set guardrails (brand, product, spend cap). Creates a tamper-proof, privacy-preserving digital mandate linking user / merchant / payment processor for accountable transactions and clean returns.</td>
+            <td>Coming to Google products in the coming months, starting with Gemini Spark</td>
+            <td>Not specified in keynote</td>
+            <td>Initially via Gemini Spark</td>
+          </tr>
+
+          <tr>
+            <td>28</td>
+            <td><strong>Universal Cart</strong></td>
+            <td>Cross-merchant, cross-service cart on top of Google Wallet. Adds items from Search, Gemini, YouTube or Gmail; tracks price drops, history and stock; surfaces hidden card-perk savings. Checkout via Google Pay or hand-off to the retailer's site.</td>
+            <td>Rolling out this summer in Search and the Gemini app; YouTube and Gmail to follow</td>
+            <td>United States (initial rollout)</td>
+            <td>Free</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 6 — Gemini app</td></tr>
+
+          <tr>
+            <td>29</td>
+            <td><strong>Gemini app redesign — "Neural Expressive"</strong></td>
+            <td>Ground-up redesign with new design language (fluid animations, vibrant colours, new typography, haptics). Templates for image / video / music; redesigned Gemini Live; generative-UI responses (interactive images, timelines, embedded videos) instead of walls of text.</td>
+            <td>Rolling out globally right now</td>
+            <td>Global (Android, iOS, Web)</td>
+            <td>Free Gemini app users</td>
+          </tr>
+
+          <tr>
+            <td>30</td>
+            <td><strong>Gemini Live — regional dialects</strong></td>
+            <td>Pick a regional dialect that resonates with you (e.g. Liverpool). Spoken Gemini responses adopt the chosen dialect.</td>
+            <td>Rolling out in the coming weeks</td>
+            <td>Global (multiple languages)</td>
+            <td>Gemini app</td>
+          </tr>
+
+          <tr>
+            <td>31</td>
+            <td><strong>Gemini Omni in the Gemini app</strong></td>
+            <td>Bring an idea to life from any combination of text, image and video. Demo: a musician transformed a raw video into a styled teaser and a 360° camera-angle shot in one flow.</td>
+            <td>Available today</td>
+            <td>Around the world (paid tiers only)</td>
+            <td>Google AI Plus, Pro and Ultra subscribers</td>
+          </tr>
+
+          <tr>
+            <td>32</td>
+            <td><strong>Daily Brief</strong></td>
+            <td>Out-of-the-box morning digest agent. Synthesises inbox, calendar and tasks; organises by topic; surfaces next steps; supports in-line actions (e.g. follow a travel-info link).</td>
+            <td>Rolling out today</td>
+            <td>United States</td>
+            <td>Google AI Plus, Pro and Ultra subscribers</td>
+          </tr>
+
+          <tr>
+            <td>33</td>
+            <td><strong>Spark in Gemini Workspace / Gemini Enterprise</strong></td>
+            <td>A version of Spark will land in Gemini Workspace and Gemini Enterprise — bringing the consumer agent's pattern into managed productivity and enterprise contexts.</td>
+            <td>Coming (no date stated)</td>
+            <td>Wherever Gemini Workspace / Enterprise are sold</td>
+            <td>Workspace / Gemini Enterprise</td>
+          </tr>
+
+          <tr>
+            <td>34</td>
+            <td><strong>Spark voice on Mac (Gemini for macOS)</strong></td>
+            <td>Long-press Function key to dictate; Spark uses multimodal understanding to read selected PDFs, images, etc. and produce a styled output (demo: turn vet records into a table inside a kennel-booking email).</td>
+            <td>Coming this summer to the Mac app (Mac app itself shipped last month)</td>
+            <td>Not specified in keynote</td>
+            <td>Google AI subscribers (expected)</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 7 — Generative Media</td></tr>
+
+          <tr>
+            <td>35</td>
+            <td><strong>Google Pics (in Google Workspace)</strong></td>
+            <td>New image creation and editing product. Hover-and-click element removal, object resizing to fit a frame, text editing and inline translation. Every output watermarked with SynthID.</td>
+            <td>Rolling out this summer</td>
+            <td>Wherever Google Workspace is available</td>
+            <td>Google Workspace</td>
+          </tr>
+
+          <tr>
+            <td>36</td>
+            <td><strong>Stitch updates</strong></td>
+            <td>Single-prompt generation of full UI designs, real-time collaboration via prompt or voice, export to code and one-click website launch. (100M UI screens generated with Stitch in the last year.)</td>
+            <td>Rolling out today globally</td>
+            <td>Global</td>
+            <td>Free</td>
+          </tr>
+
+          <tr>
+            <td>37</td>
+            <td><strong>Google Flow + Gemini Omni</strong></td>
+            <td>Apply Omni to Flow: transform the environment of a raw shot, add VFX, even add new characters while preserving the original performance.</td>
+            <td>Available today</td>
+            <td>Wherever Google Flow is available</td>
+            <td>Google Flow (subscription tier per existing Flow access)</td>
+          </tr>
+
+          <tr>
+            <td>38</td>
+            <td><strong>Google Flow agent</strong></td>
+            <td>Multi-action agent inside Flow. Demo: from a single image, generate 16 unique camera-angle videos; or transform every scene in a sequence from morning to night with consistent physics (sky, headlights, dust illumination).</td>
+            <td>Available today</td>
+            <td>Wherever Google Flow is available</td>
+            <td>Google Flow</td>
+          </tr>
+
+          <tr>
+            <td>39</td>
+            <td><strong>Flow tools (vibe-code custom creative tools)</strong></td>
+            <td>Build, share and remix custom creative tools inside Flow (e.g. video-effects, hand-drawn animation, text layering tools) without leaving the product.</td>
+            <td>Available today</td>
+            <td>Wherever Google Flow is available</td>
+            <td>Google Flow</td>
+          </tr>
+
+          <tr>
+            <td>40</td>
+            <td><strong>Google Flow Music</strong></td>
+            <td>Record an instrument (e.g. a piano riff), then prompt for a new style (e.g. R&amp;B with a female vocal) to produce a demo track that guides a real band.</td>
+            <td>Available today</td>
+            <td>Wherever Google Flow is available</td>
+            <td>Google Flow</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 8 — Intelligent Eyewear (Android XR)</td></tr>
+
+          <tr>
+            <td>41</td>
+            <td><strong>Display glasses with in-lens display</strong></td>
+            <td>Glance-able info in front of you — Uber pickup details, live translation, "Create My Widget" glanceable elements. First wave of developer experiences already in build.</td>
+            <td>Trusted Tester Program expansion later this year</td>
+            <td>Not specified in keynote</td>
+            <td>Trusted testers</td>
+          </tr>
+
+          <tr>
+            <td>42</td>
+            <td><strong>First audio Intelligent Eyewear</strong></td>
+            <td>Audio-only glasses giving all-day private Gemini help in your ear — music, photos, calls, app actions via voice (e.g. Maps walking nav, DoorDash order with tip, summarising muted texts, adding events to Calendar). Designed with Gentle Monster and Warby Parker; Samsung engineering; pairs with both Android and iOS.</td>
+            <td>Arriving this fall 2026</td>
+            <td>Initial markets not specified in keynote</td>
+            <td>Consumer hardware purchase</td>
+          </tr>
+
+          <tr>
+            <td>43</td>
+            <td><strong>Android XR platform</strong> <span class="recap">(recap)</span></td>
+            <td>Platform built with Samsung and optimised for Snapdragon (Qualcomm) that underpins both headsets and the new Intelligent Eyewear range.</td>
+            <td>Recap — already in market</td>
+            <td>Global</td>
+            <td>Hardware-dependent</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 9 — Closing (security &amp; science)</td></tr>
+
+          <tr>
+            <td>44</td>
+            <td><strong>CodeMender API (Code Security Agent)</strong></td>
+            <td>Frontier-grade agent that automatically finds and fixes critical software vulnerabilities. A new API for it is opening to a select group of experts; broader launch planned.</td>
+            <td>Select-tester API today; broader launch "soon"</td>
+            <td>Not specified in keynote</td>
+            <td>Invite-only initially</td>
+          </tr>
+
+          <tr>
+            <td>45</td>
+            <td><strong>Gemini for Science</strong></td>
+            <td>Suite bringing AI tools to scientific workflows. New Labs prototypes for staying on top of newly published papers, turning research goals into runnable code, and generating new hypotheses. Sits alongside existing tools — AlphaFold, AlphaGenome, AlphaEarth Foundations (planet-scale digital twin), WeatherNext (hurricane forecasting) — and Isomorphic Labs' pre-clinical pipeline (immune disorders, cancer).</td>
+            <td>Announced today (Labs prototypes; specific availability not stated)</td>
+            <td>Not specified in keynote</td>
+            <td>Labs (no tier specified)</td>
+          </tr>
+
+          <tr>
+            <td>46</td>
+            <td><strong>Build with Gemini XPRIZE Hackathon</strong> [also in dev keynote]</td>
+            <td>Global hackathon, $2M in prizes, aimed at solutions that positively impact 1 billion lives.</td>
+            <td>Launched today (formally announced in the developer keynote later the same day)</td>
+            <td>Global</td>
+            <td>Open to all builders</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="appendix-divider">
+    <span class="eyebrow-line">Bijlage C · brontabel</span>
+    <h2>Google I/O 2026 Developer Keynote — 36 aankondigingen</h2>
+    <p class="appendix-meta">
+      Bron: <a href="https://www.youtube.com/live/aqmpZocmR8o">Developer Keynote (Google I/O '26)</a>, Google for Developers, 19 mei 2026 (58:47). Tabelinhoud is integraal overgenomen uit het bronbestand in het Engels om feitelijke nauwkeurigheid te bewaren. Regio-kolom weerspiegelt wat in de keynote daadwerkelijk werd gezegd; de meeste lanceringen zijn wereldwijde ontwikkelaarsproducten zonder geografische beperking.
+    </p>
+
+    <div class="table-wrap">
+      <table class="bds-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Announcement</th>
+            <th>Short description</th>
+            <th>Availability</th>
+            <th>Regions</th>
+            <th>Subscription / access</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr class="section"><td colspan="6">Chapter 2 — Building Agents (Gemini API &amp; AI Studio)</td></tr>
+
+          <tr>
+            <td>1</td>
+            <td><strong>Managed Agents in Gemini API</strong></td>
+            <td>Single Gemini API call returns an agent <em>and</em> a Google-hosted remote Linux sandbox for secure, isolated execution. Custom instructions, tools and data attach through that one call; Google handles all infrastructure. Early access customers include Ramp, Resemble AI and Klipy.</td>
+            <td>Available today (GA)</td>
+            <td>Wherever the Gemini API is available (not specified in keynote)</td>
+            <td>Gemini API (paid usage)</td>
+          </tr>
+
+          <tr>
+            <td>2</td>
+            <td><strong>Custom agent templates in AI Studio</strong></td>
+            <td>Open-source agent templates pre-loaded with skills and tools defined as markdown — e.g. AI Talk Radio Agent, Customer Support Agent. Source files are editable directly in the AI Studio playground.</td>
+            <td>Available today</td>
+            <td>Wherever AI Studio is available</td>
+            <td>Google AI Studio (free tier)</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td><strong>AI Studio → Cloud Run instant deploy (no credit card for new users)</strong></td>
+            <td>Brand-new users can deploy an AI Studio app to a live URL on Cloud Run in a few clicks, without a credit card. Existing Google Cloud projects are also supported.</td>
+            <td>Starting today</td>
+            <td>Cloud Run regions (not specified in keynote)</td>
+            <td>Google AI Studio + Google Cloud (free entry path)</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td><strong>Google Workspace integration in AI Studio</strong></td>
+            <td>Prompt-driven connections to Docs, Gmail and Calendar from inside AI Studio Build, alongside the existing Firebase, Firestore, Multichat, Web Search and Nano Banana image generation integrations.</td>
+            <td>Officially announced today</td>
+            <td>Wherever AI Studio + Workspace are available</td>
+            <td>Google AI Studio + Workspace account</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td><strong>Build Android apps in AI Studio</strong></td>
+            <td>Go from idea to Kotlin-based Android app entirely in AI Studio — no SDKs, no local environment. Built-in Android Emulator preview; plug in a physical phone to install.</td>
+            <td>Starting today</td>
+            <td>Wherever AI Studio is available</td>
+            <td>Google AI Studio</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td><strong>Google Play Store publishing from AI Studio</strong></td>
+            <td>Connect a Play Developer Account and push the app straight to the internal test track from AI Studio's new Publish flow. Testing on your own device works today; sharing with trusted testers rolls out later this summer.</td>
+            <td>Own-device testing today; trusted-tester sharing later summer 2026</td>
+            <td>Wherever Google Play developer accounts are accepted</td>
+            <td>AI Studio + Google Play Developer Account</td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td><strong>AI Studio mobile app</strong></td>
+            <td>Brand-new mobile companion that brings the AI Studio build experience to your phone.</td>
+            <td>Rolls out "in a few weeks"; pre-register today</td>
+            <td>Not specified in keynote</td>
+            <td>Google AI Studio</td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td><strong>Antigravity SDK</strong></td>
+            <td>Programmatic access to the same Gemini-optimised agent harness used by Antigravity, deployable on your own infrastructure for full customisation and control.</td>
+            <td>Launching today</td>
+            <td>Global (developer SDK)</td>
+            <td>Free SDK; Gemini API usage charges apply</td>
+          </tr>
+
+          <tr>
+            <td>9</td>
+            <td><strong>One-click export from AI Studio to Antigravity</strong></td>
+            <td>Ports the full file system and complete context from an AI Studio project into Antigravity so you can continue in a local development environment without rebuilding state.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>AI Studio + Antigravity (both free entry points)</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 3 — Antigravity</td></tr>
+
+          <tr>
+            <td>10</td>
+            <td><strong>Google Antigravity 2.0 (desktop app)</strong></td>
+            <td>New "agent-first" desktop application. Run multiple agents across multiple projects and worktrees in parallel — one vibe-codes the marketing site, another generates brand assets, a third plans architecture, with no collisions. Usable alongside any IDE.</td>
+            <td>Available today (announced earlier in the main keynote)</td>
+            <td>Global</td>
+            <td>Free developer tool; uses Gemini API quota</td>
+          </tr>
+
+          <tr>
+            <td>11</td>
+            <td><strong>Dynamic Subagents</strong></td>
+            <td>Agents can spawn specialised helpers (e.g. QA subagent, Data Science subagent) that work in parallel on large tasks instead of overwhelming a single agent.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Antigravity 2.0</td>
+          </tr>
+
+          <tr>
+            <td>12</td>
+            <td><strong>Scheduled Tasks</strong></td>
+            <td>Standard cron scheduling for agents — e.g. summarise pending PRs every morning, monitor cloud health every hour. Puts agents on autopilot for proactive workflows.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Antigravity 2.0</td>
+          </tr>
+
+          <tr>
+            <td>13</td>
+            <td><strong>Antigravity CLI</strong></td>
+            <td>Terminal-native counterpart to Antigravity 2.0 — same harness, same models, same agents, with CLI-tailored UX (themes, keybindings). Includes new <code>/btw</code> command to fork a conversation. Audio input is supported via the latest audio-understanding model.</td>
+            <td>Available today, rolled out to all Gemini CLI users; migration guides published</td>
+            <td>Global</td>
+            <td>Free; Gemini API usage applies</td>
+          </tr>
+
+          <tr>
+            <td>14</td>
+            <td><strong>One-click setup for Android, Firebase &amp; web in Antigravity</strong></td>
+            <td>Pre-wired integrations for building in the Google ecosystem with zero configuration. Stack remains otherwise agnostic — no vendor lock-in.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Antigravity</td>
+          </tr>
+
+          <tr>
+            <td>15</td>
+            <td><strong>Domain-specific skills bundles — Science bundle</strong></td>
+            <td>First in a planned series of domain skill bundles. Equips agents with primitives for health, biology and scientific research workflows.</td>
+            <td>Starting today</td>
+            <td>Global</td>
+            <td>Antigravity</td>
+          </tr>
+
+          <tr>
+            <td>16</td>
+            <td><strong>Antigravity for Enterprise (Google Cloud connection)</strong></td>
+            <td>Antigravity can now connect directly to enterprise Google Cloud projects under standard enterprise terms.</td>
+            <td>Available today</td>
+            <td>Wherever Google Cloud is available</td>
+            <td>Google Cloud enterprise customers</td>
+          </tr>
+
+          <tr>
+            <td>17</td>
+            <td><strong>Antigravity in Gemini Enterprise</strong></td>
+            <td>Antigravity will roll out to existing Gemini Enterprise customers.</td>
+            <td>Coming months</td>
+            <td>Wherever Gemini Enterprise is sold</td>
+            <td>Gemini Enterprise</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 4 — Android</td></tr>
+
+          <tr>
+            <td>18</td>
+            <td><strong>Official Android support in Antigravity</strong></td>
+            <td>First-class Android development inside Antigravity, complementing native AI Studio Android support.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Antigravity</td>
+          </tr>
+
+          <tr>
+            <td>19</td>
+            <td><strong>Android CLI (built into Antigravity, now stable)</strong></td>
+            <td>Toolset for agents covering the full Android workflow without Android Studio: SDK download, project creation, running on devices. Internal testing showed ~70% fewer tokens and up to 3× faster task completion.</td>
+            <td>Stable today</td>
+            <td>Global</td>
+            <td>Antigravity</td>
+          </tr>
+
+          <tr>
+            <td>20</td>
+            <td><strong>Android Knowledge Base</strong></td>
+            <td>Specialised data source that lets agents search and fetch the latest official Android developer guidance — including coverage of new form factors like Display Glasses that most LLMs don't know yet.</td>
+            <td>Available today (part of Android CLI)</td>
+            <td>Global</td>
+            <td>Android CLI / Antigravity</td>
+          </tr>
+
+          <tr>
+            <td>21</td>
+            <td><strong>Open-sourced Android Skills</strong></td>
+            <td>Curated skill set encoding best practices — edge-to-edge support, migrating from XML to Compose, Jetpack Navigation 3 migrations, R8 analysis, App Links setup, etc.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Free / open source</td>
+          </tr>
+
+          <tr>
+            <td>22</td>
+            <td><strong>Gemini Nano 4 (on-device model)</strong></td>
+            <td>Latest on-device Gemini Nano generation, used in the demo for offline AI trip-summary on a Samsung Galaxy S26 Ultra. Apps can use hybrid Firebase logic to fall back to cloud only when an on-device model isn't available.</td>
+            <td>Referenced as latest (no explicit GA date in this keynote)</td>
+            <td>On supported Android devices</td>
+            <td>Free on-device</td>
+          </tr>
+
+          <tr>
+            <td>23</td>
+            <td><strong>Samsung Galaxy S26 Ultra on Android Device Streaming</strong></td>
+            <td>The S26 Ultra will be addable to the Android Device Streaming pool so developers can deploy and test on a real device they don't own.</td>
+            <td>Later this summer 2026</td>
+            <td>Wherever Android Device Streaming is offered</td>
+            <td>Android Studio / Google Play Console</td>
+          </tr>
+
+          <tr>
+            <td>24</td>
+            <td><strong>R8 configuration Analyzer in Android Studio</strong></td>
+            <td>Analyses keep-rules and build configuration, recommends switching to R8 full mode, and reports optimisation, obfuscation and shrinking scores. Drives fewer ANRs, smaller app size and quicker startup.</td>
+            <td>Available in latest Android Studio</td>
+            <td>Global</td>
+            <td>Android Studio (free)</td>
+          </tr>
+
+          <tr>
+            <td>25</td>
+            <td><strong>App Links Assistant (updated)</strong></td>
+            <td>New URL Mapping Editor walks you through implementing deep links — pick the host, the activity that should handle the intent, and provide a sample URL. AI generates the routing logic.</td>
+            <td>Available in latest Android Studio</td>
+            <td>Global</td>
+            <td>Android Studio (free)</td>
+          </tr>
+
+          <tr>
+            <td>26</td>
+            <td><strong>Publish to Google Play from Android Studio</strong></td>
+            <td>The "Generate signed app bundle" flow has a new option to upload directly to Play — pushing to the internal test track without leaving Android Studio.</td>
+            <td>Available today</td>
+            <td>Wherever Google Play developer accounts are accepted</td>
+            <td>Android Studio + Play Developer Account</td>
+          </tr>
+
+          <tr>
+            <td>27</td>
+            <td><strong>Migration Assistant in Android Studio</strong></td>
+            <td>Early sneak peek of a new wizard that migrates apps to Android from iOS, React Native or web. Choose AI-led or Guided Migration; supports Journeys-based agent validation of the resulting app. Also working on Kotlin Multiplatform migration to share business logic with iOS.</td>
+            <td>Coming later in 2026 (sneak peek)</td>
+            <td>Global</td>
+            <td>Android Studio (free)</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 5 — Chrome &amp; Web</td></tr>
+
+          <tr>
+            <td>28</td>
+            <td><strong>Modern Web Guidance</strong></td>
+            <td>Expert-vetted, Baseline-aware skill bundle that teaches AI coding agents to use current web-platform features (with fallbacks for the newest ones). Reported +37 percentage-point pass-rate uplift on guided vs unguided web tasks. Over 100 use cases at launch; framework-agnostic.</td>
+            <td>Early preview today</td>
+            <td>Global</td>
+            <td>Free; one-click install in Antigravity; installable as a skill package in other coding agents</td>
+          </tr>
+
+          <tr>
+            <td>29</td>
+            <td><strong>WebMCP API</strong></td>
+            <td>Proposed browser standard that lets a site expose JavaScript-defined tools to browser-based agents (e.g. an <code>updateCarConfiguration</code> tool exposes the configurator schema). Makes agent interactions precise and reliable instead of relying on DOM scraping.</td>
+            <td>Enters Origin Trial in Chrome 149</td>
+            <td>Anywhere Chrome 149+ is available (Origin Trial sites)</td>
+            <td>Free (web standard / browser feature)</td>
+          </tr>
+
+          <tr>
+            <td>30</td>
+            <td><strong>Gemini in Chrome — WebMCP support</strong></td>
+            <td>Shown as a prototype: Gemini in Chrome consumes a site's WebMCP tools, builds an autobrowse plan, asks for confirmation, then executes (demo: "configure the ultimate party car under $40k").</td>
+            <td>"Soon" (active experiments with ecosystem partners)</td>
+            <td>Wherever Gemini in Chrome is rolled out</td>
+            <td>Gemini in Chrome</td>
+          </tr>
+
+          <tr>
+            <td>31</td>
+            <td><strong>Chrome DevTools for Agents</strong></td>
+            <td>Closed feedback loop for coding agents made of an MCP server, a CLI and tailored skills. Lets agents observe runtime behaviour, run Lighthouse, read reports and re-audit after fixes — without a human acting as clipboard between DevTools and chat.</td>
+            <td>Available today</td>
+            <td>Global</td>
+            <td>Free; works with Antigravity and 20+ other coding agents</td>
+          </tr>
+
+          <tr>
+            <td>32</td>
+            <td><strong>Lighthouse "agentic browsing" audit category</strong></td>
+            <td>New Lighthouse category that validates WebMCP tool registrations, declarative form metadata, the new <code>llms.txt</code> file, and re-weights accessibility audits (since agents navigate via the accessibility tree).</td>
+            <td>Available today (part of Chrome DevTools for Agents)</td>
+            <td>Global</td>
+            <td>Free</td>
+          </tr>
+
+          <tr>
+            <td>33</td>
+            <td><strong>HTML-in-Canvas API</strong></td>
+            <td>Lets you render real DOM elements inside a <code>&lt;canvas&gt;</code> environment so canvas content becomes searchable, accessible, selectable, translatable, autofill-compatible and CSS-styleable — without giving up WebGL/3D visuals.</td>
+            <td>In Origin Trial now</td>
+            <td>Anywhere participating Chrome versions are available</td>
+            <td>Free (web platform feature)</td>
+          </tr>
+
+          <tr class="section"><td colspan="6">Chapter 6 — Closing (programmes &amp; commercial)</td></tr>
+
+          <tr>
+            <td>34</td>
+            <td><strong>Build with Gemini XPRIZE Hackathon</strong></td>
+            <td>Global hackathon with $2 million in prizes for builders solving real-world problems with Gemini, aimed at positively impacting 1 billion lives.</td>
+            <td>Launched today</td>
+            <td>Global</td>
+            <td>Open to all builders</td>
+          </tr>
+
+          <tr>
+            <td>35</td>
+            <td><strong>Google AI Ultra plan ($100/month) + simplified pricing</strong></td>
+            <td>New $100/month Ultra tier alongside a simplified consumer-AI pricing structure (announced in the morning main-stage keynote and recapped here).</td>
+            <td>Available now</td>
+            <td>Wherever Google AI plans are sold</td>
+            <td>New "Google AI Ultra" subscription</td>
+          </tr>
+
+          <tr>
+            <td>36</td>
+            <td><strong>$100 bonus credits for Ultra subscribers</strong></td>
+            <td>One-time $100 bonus credit for Google AI Ultra subscribers, redeemable in the Antigravity app; credits activate when you hit your normal limit. Pitched as enough fuel to keep agents running through the upcoming holiday long weekend.</td>
+            <td>Available today; claim in the Antigravity app</td>
+            <td>Wherever Google AI Ultra is sold</td>
+            <td>Google AI Ultra subscribers</td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+<footer class="blog-footer">
+  <p>Business Data Solutions · Witek ten Hove · <a href="https://businessdatasolutions.nl">businessdatasolutions.nl</a></p>
+  <p>Bronaankondigingen integraal beschikbaar via de YouTube-links in bijlages A, B en C.</p>
+</footer>
+
+</body>
+</html>
