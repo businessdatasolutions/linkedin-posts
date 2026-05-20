@@ -35,7 +35,7 @@ Wat valt jou op aan deze keynotes? Mis ik iets?
 
 ## Eerste reactie (apart plaatsen, niet in de hoofdpost)
 
-Het volledige artikel met alle drie de brontabellen: [jouw link]
+Het volledige artikel met alle drie de brontabellen: https://businessdatasolutions.github.io/linkedin-posts/keynotes-2026/synthese-anthropic-google-mei-2026.html?utm_source=linkedin&utm_medium=social&utm_campaign=synthese-mei-2026
 
 ---
 
