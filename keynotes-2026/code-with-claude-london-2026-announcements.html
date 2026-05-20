@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Code with Claude London 2026 — Opening Keynote: announcements</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 1400px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    table { border-collapse: collapse; font-size: 14px; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; vertical-align: top; text-align: left; }
+    thead { background: #f4f4f4; }
+    tr.section td { background: #eef; font-weight: 600; }
+    code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; font-size: 0.9em; }
+    .recap { color: #777; font-style: italic; }
+    .note { color: #555; font-size: 13px; }
+  </style>
+</head>
+<body>
+
+<h1>Code with Claude London 2026 — Opening Keynote: product &amp; feature announcements</h1>
+<p class="meta">
+  Source: <a href="https://youtu.be/6amLO7I9xdg">Code with Claude London 2026: Opening Keynote</a>, Claude (Anthropic), 2026-05-19 (46:27).
+  Compiled 2026-05-20. Anthropic launches its developer platform globally and didn't carve out regional gating in this keynote, so the Regions column reads "Global" unless specified otherwise.
+  Items announced as new at this event are highlighted; items recapped from prior launches are marked accordingly. Speakers: Boris (opening), Lisa (research PM), Angela &amp; Caitlyn (Claude platform), Cat &amp; Boris Cherny (Claude Code).
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Announcement</th>
+      <th>Short description</th>
+      <th>Availability</th>
+      <th>Regions</th>
+      <th>Subscription / access</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="section"><td colspan="6">Models (Lisa — Research PM)</td></tr>
+
+    <tr>
+      <td>1</td>
+      <td><strong>Opus 4.7</strong> <span class="recap">(recap)</span></td>
+      <td>Anthropic's current frontier model. Reported customer wins: AMP moved its "smart mode" to Opus 4.7 after internal benchmark outperformance and simplified its tooling; Rakuten saw 3× more production engineering tasks resolved vs the previous model; Intuit saw Opus 4.7 catching its own logical faults during planning and accelerating execution. Opus 4.7 powers Claude Design (Anthropic Labs).</td>
+      <td>Already shipped — currently the frontier model</td>
+      <td>Global (via Claude API and products)</td>
+      <td>Claude API, Claude Code, Claude.ai</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td><strong>Mythos preview</strong></td>
+      <td>Next-generation model in preview, mentioned three times as a peer of Opus 4.7. Capability anchor: Mythos read the entire OpenBSD source tree and found a 27-year-old vulnerability that every prior human reviewer, fuzzer and static analyser had missed. Used by the keynote as the forward-looking signal that future Claude models will be "more capable than Opus 4.7 and even Mythos preview".</td>
+      <td>Preview (no GA date stated)</td>
+      <td>Global (preview cohort)</td>
+      <td>Preview access (gating not specified)</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td><strong>Claude Design (by Anthropic Labs)</strong> <span class="recap">(recap)</span></td>
+      <td>Anthropic Labs product powered by Opus 4.7. Customers reportedly build production interfaces in a single sitting; Lisa notes Opus 4.7 "has a taste for visual design".</td>
+      <td>Already launched</td>
+      <td>Global</td>
+      <td>Anthropic Labs</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td><strong>Forward-looking model capabilities</strong> <span class="note">(forecast)</span></td>
+      <td>Three named direction areas for upcoming Claude generations: higher judgment and code taste (trust models with complex autonomous engineering); effectively infinite context windows (continuous long-horizon work without losing core intent); multi-agent coordination (teams of agents tackling goals too big for one agent).</td>
+      <td>Forecast — no dates</td>
+      <td>n/a</td>
+      <td>n/a</td>
+    </tr>
+
+    <tr class="section"><td colspan="6">Claude Platform — Claude Managed Agents (Angela &amp; Caitlyn)</td></tr>
+
+    <tr>
+      <td>5</td>
+      <td><strong>Advisor strategy</strong> <span class="recap">(recently shipped)</span></td>
+      <td>API pattern that splits execution from advising. A smaller model (Haiku or Sonnet class) executes; when it needs help it reaches out to a larger model (Opus) for advice. Implemented by updating the <code>tools</code> array on the Messages API — no rebuild required. EvenUp Legal reported "frontier model quality at 5× lower cost". Best for premium product paths and high-volume agentic workloads where ROI matters.</td>
+      <td>Available now</td>
+      <td>Global</td>
+      <td>Claude API (Messages API)</td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td><strong>Claude Managed Agents</strong> <span class="recap">(recap, with new features below)</span></td>
+      <td>Agentic harness paired with production-grade infrastructure. Reported to let teams ship "10× faster" and reach production-grade agents in days, not months. Anchor customer: Asana built AI Teammates on Managed Agents so humans collaborate with agents directly inside Asana projects.</td>
+      <td>Already launched</td>
+      <td>Global</td>
+      <td>Claude Developer Platform</td>
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td><strong>Multi-agent orchestration / Outcomes / Dreaming</strong> <span class="recap">(recently shipped)</span></td>
+      <td>Three Managed Agents upgrades shipped recently: <em>Multi-agent orchestration</em> (build fleets of agents); <em>Outcomes</em> (specify what success looks like, Claude iterates to get there); <em>Dreaming</em> (Claude introspects its own previous transcripts to learn and self-improve).</td>
+      <td>Available now</td>
+      <td>Global</td>
+      <td>Claude Managed Agents</td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td><strong>Self-hosted sandboxes</strong> — new today</td>
+      <td>Claude Managed Agents now execute work on <em>your</em> server, not just Anthropic's. When the agent needs to run code or edit files, it puts a work item on a queue that your provider picks up and spins up a sandbox in your own account. First-class integration support for Daytona, Cloudflare, Vercel and Modal sandboxes.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Claude Managed Agents (+ your sandbox provider account)</td>
+    </tr>
+
+    <tr>
+      <td>9</td>
+      <td><strong>MCP tunnels</strong> — new today</td>
+      <td>Lets Managed Agents reach MCP servers that live behind your firewall on your private network — no public-internet exposure. You set up a gateway on your private network and establish a secure connection to Anthropic; agents call MCP servers via <code>tunnel.anthropic.com</code> URLs. Configured directly in the Claude Developer Console.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Claude Managed Agents + Claude Developer Console</td>
+    </tr>
+
+    <tr class="section"><td colspan="6">Claude Code (Cat &amp; Boris Cherny)</td></tr>
+
+    <tr>
+      <td>10</td>
+      <td><strong>Claude Code Desktop app</strong> — new updates today</td>
+      <td>Full-screen graphical interface for Claude Code. Built-in previews, sidebar control plane, image and rich-output rendering. Single unified view across local sessions and cloud sessions with visual indicators of which agents are running, blocked, or need input. Built on the Claude Agent SDK.</td>
+      <td>Latest updates available today</td>
+      <td>Global</td>
+      <td>Claude Code subscription</td>
+    </tr>
+
+    <tr>
+      <td>11</td>
+      <td><strong>Claude Agents view (CLI)</strong> — new</td>
+      <td>New surface for Claude Code users who prefer the terminal. Single-pane view of what's running, what's waiting on you, and what's done. Inline reply to unblock, and jump in and out of sessions without losing your place.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Claude Code subscription</td>
+    </tr>
+
+    <tr>
+      <td>12</td>
+      <td><strong>Code Review product</strong> <span class="recap">(recap)</span></td>
+      <td>Deploys a team of agents to traverse all code changes and auxiliary files looking for critical bugs. "Thousands of companies use this every day, including every internal Anthropic team."</td>
+      <td>Already shipped</td>
+      <td>Global</td>
+      <td>Claude Code</td>
+    </tr>
+
+    <tr>
+      <td>13</td>
+      <td><strong>Claude Code on iOS &amp; Android (Remote Control)</strong> <span class="recap">(recap)</span></td>
+      <td>Fire off Claude Code tasks from your phone — leave the laptop closed, walk outside, still ship work.</td>
+      <td>Already shipped</td>
+      <td>Global (mobile)</td>
+      <td>Claude Code</td>
+    </tr>
+
+    <tr>
+      <td>14</td>
+      <td><strong>Autofix (PRs)</strong> <span class="recap">(recap)</span></td>
+      <td>Listens for flaky CI, code-review comments and merge conflicts on your open PR and proactively fixes them so the PR stays green without manual babysitting.</td>
+      <td>Already shipped</td>
+      <td>Global</td>
+      <td>Claude Code</td>
+    </tr>
+
+    <tr>
+      <td>15</td>
+      <td><strong>Routines</strong> — new</td>
+      <td>Configure once and Claude Code runs on a schedule, in response to a webhook, or on an arbitrary API call. Demoed in the keynote as the way a new GitHub issue gets a working PR overnight without anyone prompting. Boris frames Routines as a "higher-order prompt" — you write the routine that prompts Claude, instead of prompting Claude yourself. Runs locally or on remote cloud compute.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Claude Code subscription</td>
+    </tr>
+
+    <tr>
+      <td>16</td>
+      <td><strong>CI autofix (in Claude Code Desktop)</strong> — new</td>
+      <td>Watches a PR that a session just opened and "babysits the PR to production" — autofixes code review and security review comments, autofixes CI failures, auto-rebases on merge conflicts. Demo example: a network-timeout CI failure that the routine diagnosed as a known infra issue and retried. In the Claude Code codebase, Anthropic configures it to fix the root cause instead of just retrying.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Claude Code Desktop</td>
+    </tr>
+
+    <tr>
+      <td>17</td>
+      <td><strong>Claude Security</strong> <span class="recap">(recap)</span></td>
+      <td>Overnight codebase scan that flags vulnerabilities ranked by severity and lets you kick off Claude Code to address each. Addresses the bottleneck where security teams can't keep up with the volume of code landing.</td>
+      <td>Already shipped</td>
+      <td>Global</td>
+      <td>Claude Code / Claude Platform</td>
+    </tr>
+
+    <tr>
+      <td>18</td>
+      <td><strong>VS Code IDE extension</strong> <span class="recap">(recap)</span></td>
+      <td>IDE extension giving the same agent as the CLI but with visual follow-along of code changes as the agent works. Built on the Claude Agent SDK — the same SDK external developers build on.</td>
+      <td>Already shipped</td>
+      <td>Global</td>
+      <td>Claude Code</td>
+    </tr>
+
+  </tbody>
+</table>
+
+<p class="meta" style="margin-top:1.5rem;">
+  <strong>Notable customer datapoints cited in the keynote</strong> (not announcements, but context for the table above):
+  Spotify (background agent on Claude Code migrating thousands of repos, 1,000+ PRs/month merged into production, ~90% migration time reduction);
+  Binti (Felicia Curcuru, foster-care case-worker software — 20 days shaved off the foster-family licensing process via Claude API);
+  Shopify (Claude Code adopted wall-to-wall across engineering + non-engineering roles);
+  Mercado Libre (23,000 engineers; 500,000+ PRs reviewed with human oversight; 9,000+ apps modernised; targeting 90% autonomous coding in a fully agent-driven PR loop by Q3 2026, per Oscar Mowen);
+  Asana (AI Teammates built on Claude Managed Agents);
+  EvenUp Legal (advisor strategy → frontier quality at 5× lower cost);
+  internal Anthropic (200% increase in PRs per engineer after wall-to-wall Claude Code adoption).
+</p>
+
+</body>
+</html>

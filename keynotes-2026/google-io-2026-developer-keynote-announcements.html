@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Google I/O '26 — Developer Keynote: announcements</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", sans-serif; max-width: 1400px; margin: 2rem auto; padding: 0 1rem; color: #222; }
+    h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1.5rem; }
+    table { border-collapse: collapse; font-size: 14px; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 6px 8px; vertical-align: top; text-align: left; }
+    thead { background: #f4f4f4; }
+    tr.section td { background: #eef; font-weight: 600; }
+    code { background: #f4f4f4; padding: 1px 4px; border-radius: 3px; font-size: 0.9em; }
+  </style>
+</head>
+<body>
+
+<h1>Google I/O '26 — Developer Keynote: product &amp; feature announcements</h1>
+<p class="meta">
+  Source: <a href="https://www.youtube.com/live/aqmpZocmR8o">Developer Keynote (Google I/O '26)</a>, Google for Developers, 2026-05-19 (58:47).
+  Compiled 2026-05-20. Region column reflects what the keynote actually stated — most launches are global developer products with no geographic carve-out called out on stage.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Announcement</th>
+      <th>Short description</th>
+      <th>Availability</th>
+      <th>Regions</th>
+      <th>Subscription / access</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr class="section"><td colspan="6">Chapter 2 — Building Agents (Gemini API &amp; AI Studio)</td></tr>
+
+    <tr>
+      <td>1</td>
+      <td><strong>Managed Agents in Gemini API</strong></td>
+      <td>Single Gemini API call returns an agent <em>and</em> a Google-hosted remote Linux sandbox for secure, isolated execution. Custom instructions, tools and data attach through that one call; Google handles all infrastructure. Early access customers include Ramp, Resemble AI and Klipy.</td>
+      <td>Available today (GA)</td>
+      <td>Wherever the Gemini API is available (not specified in keynote)</td>
+      <td>Gemini API (paid usage)</td>
+    </tr>
+
+    <tr>
+      <td>2</td>
+      <td><strong>Custom agent templates in AI Studio</strong></td>
+      <td>Open-source agent templates pre-loaded with skills and tools defined as markdown — e.g. AI Talk Radio Agent, Customer Support Agent. Source files are editable directly in the AI Studio playground.</td>
+      <td>Available today</td>
+      <td>Wherever AI Studio is available</td>
+      <td>Google AI Studio (free tier)</td>
+    </tr>
+
+    <tr>
+      <td>3</td>
+      <td><strong>AI Studio → Cloud Run instant deploy (no credit card for new users)</strong></td>
+      <td>Brand-new users can deploy an AI Studio app to a live URL on Cloud Run in a few clicks, without a credit card. Existing Google Cloud projects are also supported.</td>
+      <td>Starting today</td>
+      <td>Cloud Run regions (not specified in keynote)</td>
+      <td>Google AI Studio + Google Cloud (free entry path)</td>
+    </tr>
+
+    <tr>
+      <td>4</td>
+      <td><strong>Google Workspace integration in AI Studio</strong></td>
+      <td>Prompt-driven connections to Docs, Gmail and Calendar from inside AI Studio Build, alongside the existing Firebase, Firestore, Multichat, Web Search and Nano Banana image generation integrations.</td>
+      <td>Officially announced today</td>
+      <td>Wherever AI Studio + Workspace are available</td>
+      <td>Google AI Studio + Workspace account</td>
+    </tr>
+
+    <tr>
+      <td>5</td>
+      <td><strong>Build Android apps in AI Studio</strong></td>
+      <td>Go from idea to Kotlin-based Android app entirely in AI Studio — no SDKs, no local environment. Built-in Android Emulator preview; plug in a physical phone to install.</td>
+      <td>Starting today</td>
+      <td>Wherever AI Studio is available</td>
+      <td>Google AI Studio</td>
+    </tr>
+
+    <tr>
+      <td>6</td>
+      <td><strong>Google Play Store publishing from AI Studio</strong></td>
+      <td>Connect a Play Developer Account and push the app straight to the internal test track from AI Studio's new Publish flow. Testing on your own device works today; sharing with trusted testers rolls out later this summer.</td>
+      <td>Own-device testing today; trusted-tester sharing later summer 2026</td>
+      <td>Wherever Google Play developer accounts are accepted</td>
+      <td>AI Studio + Google Play Developer Account</td>
+    </tr>
+
+    <tr>
+      <td>7</td>
+      <td><strong>AI Studio mobile app</strong></td>
+      <td>Brand-new mobile companion that brings the AI Studio build experience to your phone.</td>
+      <td>Rolls out "in a few weeks"; pre-register today</td>
+      <td>Not specified in keynote</td>
+      <td>Google AI Studio</td>
+    </tr>
+
+    <tr>
+      <td>8</td>
+      <td><strong>Antigravity SDK</strong></td>
+      <td>Programmatic access to the same Gemini-optimised agent harness used by Antigravity, deployable on your own infrastructure for full customisation and control.</td>
+      <td>Launching today</td>
+      <td>Global (developer SDK)</td>
+      <td>Free SDK; Gemini API usage charges apply</td>
+    </tr>
+
+    <tr>
+      <td>9</td>
+      <td><strong>One-click export from AI Studio to Antigravity</strong></td>
+      <td>Ports the full file system and complete context from an AI Studio project into Antigravity so you can continue in a local development environment without rebuilding state.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>AI Studio + Antigravity (both free entry points)</td>
+    </tr>
+
+    <tr class="section"><td colspan="6">Chapter 3 — Antigravity</td></tr>
+
+    <tr>
+      <td>10</td>
+      <td><strong>Google Antigravity 2.0 (desktop app)</strong></td>
+      <td>New "agent-first" desktop application. Run multiple agents across multiple projects and worktrees in parallel — one vibe-codes the marketing site, another generates brand assets, a third plans architecture, with no collisions. Usable alongside any IDE.</td>
+      <td>Available today (announced earlier in the main keynote)</td>
+      <td>Global</td>
+      <td>Free developer tool; uses Gemini API quota</td>
+    </tr>
+
+    <tr>
+      <td>11</td>
+      <td><strong>Dynamic Subagents</strong></td>
+      <td>Agents can spawn specialised helpers (e.g. QA subagent, Data Science subagent) that work in parallel on large tasks instead of overwhelming a single agent.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Antigravity 2.0</td>
+    </tr>
+
+    <tr>
+      <td>12</td>
+      <td><strong>Scheduled Tasks</strong></td>
+      <td>Standard cron scheduling for agents — e.g. summarise pending PRs every morning, monitor cloud health every hour. Puts agents on autopilot for proactive workflows.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Antigravity 2.0</td>
+    </tr>
+
+    <tr>
+      <td>13</td>
+      <td><strong>Antigravity CLI</strong></td>
+      <td>Terminal-native counterpart to Antigravity 2.0 — same harness, same models, same agents, with CLI-tailored UX (themes, keybindings). Includes new <code>/btw</code> command to fork a conversation. Audio input is supported via the latest audio-understanding model.</td>
+      <td>Available today, rolled out to all Gemini CLI users; migration guides published</td>
+      <td>Global</td>
+      <td>Free; Gemini API usage applies</td>
+    </tr>
+
+    <tr>
+      <td>14</td>
+      <td><strong>One-click setup for Android, Firebase &amp; web in Antigravity</strong></td>
+      <td>Pre-wired integrations for building in the Google ecosystem with zero configuration. Stack remains otherwise agnostic — no vendor lock-in.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Antigravity</td>
+    </tr>
+
+    <tr>
+      <td>15</td>
+      <td><strong>Domain-specific skills bundles — Science bundle</strong></td>
+      <td>First in a planned series of domain skill bundles. Equips agents with primitives for health, biology and scientific research workflows.</td>
+      <td>Starting today</td>
+      <td>Global</td>
+      <td>Antigravity</td>
+    </tr>
+
+    <tr>
+      <td>16</td>
+      <td><strong>Antigravity for Enterprise (Google Cloud connection)</strong></td>
+      <td>Antigravity can now connect directly to enterprise Google Cloud projects under standard enterprise terms.</td>
+      <td>Available today</td>
+      <td>Wherever Google Cloud is available</td>
+      <td>Google Cloud enterprise customers</td>
+    </tr>
+
+    <tr>
+      <td>17</td>
+      <td><strong>Antigravity in Gemini Enterprise</strong></td>
+      <td>Antigravity will roll out to existing Gemini Enterprise customers.</td>
+      <td>Coming months</td>
+      <td>Wherever Gemini Enterprise is sold</td>
+      <td>Gemini Enterprise</td>
+    </tr>
+
+    <tr class="section"><td colspan="6">Chapter 4 — Android</td></tr>
+
+    <tr>
+      <td>18</td>
+      <td><strong>Official Android support in Antigravity</strong></td>
+      <td>First-class Android development inside Antigravity, complementing native AI Studio Android support.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Antigravity</td>
+    </tr>
+
+    <tr>
+      <td>19</td>
+      <td><strong>Android CLI (built into Antigravity, now stable)</strong></td>
+      <td>Toolset for agents covering the full Android workflow without Android Studio: SDK download, project creation, running on devices. Internal testing showed ~70% fewer tokens and up to 3× faster task completion.</td>
+      <td>Stable today</td>
+      <td>Global</td>
+      <td>Antigravity</td>
+    </tr>
+
+    <tr>
+      <td>20</td>
+      <td><strong>Android Knowledge Base</strong></td>
+      <td>Specialised data source that lets agents search and fetch the latest official Android developer guidance — including coverage of new form factors like Display Glasses that most LLMs don't know yet.</td>
+      <td>Available today (part of Android CLI)</td>
+      <td>Global</td>
+      <td>Android CLI / Antigravity</td>
+    </tr>
+
+    <tr>
+      <td>21</td>
+      <td><strong>Open-sourced Android Skills</strong></td>
+      <td>Curated skill set encoding best practices — edge-to-edge support, migrating from XML to Compose, Jetpack Navigation 3 migrations, R8 analysis, App Links setup, etc.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Free / open source</td>
+    </tr>
+
+    <tr>
+      <td>22</td>
+      <td><strong>Gemini Nano 4 (on-device model)</strong></td>
+      <td>Latest on-device Gemini Nano generation, used in the demo for offline AI trip-summary on a Samsung Galaxy S26 Ultra. Apps can use hybrid Firebase logic to fall back to cloud only when an on-device model isn't available.</td>
+      <td>Referenced as latest (no explicit GA date in this keynote)</td>
+      <td>On supported Android devices</td>
+      <td>Free on-device</td>
+    </tr>
+
+    <tr>
+      <td>23</td>
+      <td><strong>Samsung Galaxy S26 Ultra on Android Device Streaming</strong></td>
+      <td>The S26 Ultra will be addable to the Android Device Streaming pool so developers can deploy and test on a real device they don't own.</td>
+      <td>Later this summer 2026</td>
+      <td>Wherever Android Device Streaming is offered</td>
+      <td>Android Studio / Google Play Console</td>
+    </tr>
+
+    <tr>
+      <td>24</td>
+      <td><strong>R8 configuration Analyzer in Android Studio</strong></td>
+      <td>Analyses keep-rules and build configuration, recommends switching to R8 full mode, and reports optimisation, obfuscation and shrinking scores. Drives fewer ANRs, smaller app size and quicker startup.</td>
+      <td>Available in latest Android Studio</td>
+      <td>Global</td>
+      <td>Android Studio (free)</td>
+    </tr>
+
+    <tr>
+      <td>25</td>
+      <td><strong>App Links Assistant (updated)</strong></td>
+      <td>New URL Mapping Editor walks you through implementing deep links — pick the host, the activity that should handle the intent, and provide a sample URL. AI generates the routing logic.</td>
+      <td>Available in latest Android Studio</td>
+      <td>Global</td>
+      <td>Android Studio (free)</td>
+    </tr>
+
+    <tr>
+      <td>26</td>
+      <td><strong>Publish to Google Play from Android Studio</strong></td>
+      <td>The "Generate signed app bundle" flow has a new option to upload directly to Play — pushing to the internal test track without leaving Android Studio.</td>
+      <td>Available today</td>
+      <td>Wherever Google Play developer accounts are accepted</td>
+      <td>Android Studio + Play Developer Account</td>
+    </tr>
+
+    <tr>
+      <td>27</td>
+      <td><strong>Migration Assistant in Android Studio</strong></td>
+      <td>Early sneak peek of a new wizard that migrates apps to Android from iOS, React Native or web. Choose AI-led or Guided Migration; supports Journeys-based agent validation of the resulting app. Also working on Kotlin Multiplatform migration to share business logic with iOS.</td>
+      <td>Coming later in 2026 (sneak peek)</td>
+      <td>Global</td>
+      <td>Android Studio (free)</td>
+    </tr>
+
+    <tr class="section"><td colspan="6">Chapter 5 — Chrome &amp; Web</td></tr>
+
+    <tr>
+      <td>28</td>
+      <td><strong>Modern Web Guidance</strong></td>
+      <td>Expert-vetted, Baseline-aware skill bundle that teaches AI coding agents to use current web-platform features (with fallbacks for the newest ones). Reported +37 percentage-point pass-rate uplift on guided vs unguided web tasks. Over 100 use cases at launch; framework-agnostic.</td>
+      <td>Early preview today</td>
+      <td>Global</td>
+      <td>Free; one-click install in Antigravity; installable as a skill package in other coding agents</td>
+    </tr>
+
+    <tr>
+      <td>29</td>
+      <td><strong>WebMCP API</strong></td>
+      <td>Proposed browser standard that lets a site expose JavaScript-defined tools to browser-based agents (e.g. an <code>updateCarConfiguration</code> tool exposes the configurator schema). Makes agent interactions precise and reliable instead of relying on DOM scraping.</td>
+      <td>Enters Origin Trial in Chrome 149</td>
+      <td>Anywhere Chrome 149+ is available (Origin Trial sites)</td>
+      <td>Free (web standard / browser feature)</td>
+    </tr>
+
+    <tr>
+      <td>30</td>
+      <td><strong>Gemini in Chrome — WebMCP support</strong></td>
+      <td>Shown as a prototype: Gemini in Chrome consumes a site's WebMCP tools, builds an autobrowse plan, asks for confirmation, then executes (demo: "configure the ultimate party car under $40k").</td>
+      <td>"Soon" (active experiments with ecosystem partners)</td>
+      <td>Wherever Gemini in Chrome is rolled out</td>
+      <td>Gemini in Chrome</td>
+    </tr>
+
+    <tr>
+      <td>31</td>
+      <td><strong>Chrome DevTools for Agents</strong></td>
+      <td>Closed feedback loop for coding agents made of an MCP server, a CLI and tailored skills. Lets agents observe runtime behaviour, run Lighthouse, read reports and re-audit after fixes — without a human acting as clipboard between DevTools and chat.</td>
+      <td>Available today</td>
+      <td>Global</td>
+      <td>Free; works with Antigravity and 20+ other coding agents</td>
+    </tr>
+
+    <tr>
+      <td>32</td>
+      <td><strong>Lighthouse "agentic browsing" audit category</strong></td>
+      <td>New Lighthouse category that validates WebMCP tool registrations, declarative form metadata, the new <code>llms.txt</code> file, and re-weights accessibility audits (since agents navigate via the accessibility tree).</td>
+      <td>Available today (part of Chrome DevTools for Agents)</td>
+      <td>Global</td>
+      <td>Free</td>
+    </tr>
+
+    <tr>
+      <td>33</td>
+      <td><strong>HTML-in-Canvas API</strong></td>
+      <td>Lets you render real DOM elements inside a <code>&lt;canvas&gt;</code> environment so canvas content becomes searchable, accessible, selectable, translatable, autofill-compatible and CSS-styleable — without giving up WebGL/3D visuals.</td>
+      <td>In Origin Trial now</td>
+      <td>Anywhere participating Chrome versions are available</td>
+      <td>Free (web platform feature)</td>
+    </tr>
+
+    <tr class="section"><td colspan="6">Chapter 6 — Closing (programmes &amp; commercial)</td></tr>
+
+    <tr>
+      <td>34</td>
+      <td><strong>Build with Gemini XPRIZE Hackathon</strong></td>
+      <td>Global hackathon with $2 million in prizes for builders solving real-world problems with Gemini, aimed at positively impacting 1 billion lives.</td>
+      <td>Launched today</td>
+      <td>Global</td>
+      <td>Open to all builders</td>
+    </tr>
+
+    <tr>
+      <td>35</td>
+      <td><strong>Google AI Ultra plan ($100/month) + simplified pricing</strong></td>
+      <td>New $100/month Ultra tier alongside a simplified consumer-AI pricing structure (announced in the morning main-stage keynote and recapped here).</td>
+      <td>Available now</td>
+      <td>Wherever Google AI plans are sold</td>
+      <td>New "Google AI Ultra" subscription</td>
+    </tr>
+
+    <tr>
+      <td>36</td>
+      <td><strong>$100 bonus credits for Ultra subscribers</strong></td>
+      <td>One-time $100 bonus credit for Google AI Ultra subscribers, redeemable in the Antigravity app; credits activate when you hit your normal limit. Pitched as enough fuel to keep agents running through the upcoming holiday long weekend.</td>
+      <td>Available today; claim in the Antigravity app</td>
+      <td>Wherever Google AI Ultra is sold</td>
+      <td>Google AI Ultra subscribers</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
