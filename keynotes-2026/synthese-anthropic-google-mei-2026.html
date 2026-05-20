@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Anthropic en Google, dezelfde dag, twee strategieën — Business Data Solutions</title>
   <meta name="description" content="Synthese van de Anthropic- en Google-keynotes van 19 mei 2026: wat ze samen vertellen over de richting van AI voor het MKB. Inclusief volledige brontabellen.">
+
+  <!-- Umami Cloud analytics — cookieless, AVG-conform, geen banner nodig. -->
+  <!-- Setup: maak een gratis account op https://cloud.umami.is, voeg deze site toe, -->
+  <!-- en vervang YOUR_UMAMI_WEBSITE_ID hieronder met de website-id uit je dashboard. -->
+  <script defer src="https://cloud.umami.is/script.js" data-website-id="YOUR_UMAMI_WEBSITE_ID"></script>
+
   <style>
     :root {
       --primary: #d4db3e;
@@ -677,7 +683,9 @@
     <p>
       Stuur me jouw lastigste AI-vraag in één zin. Geen verkoopgesprek, geen lange demo — een concrete reactie op een concrete situatie. Vaak weten we binnen een paar dagen of er een werkend prototype mogelijk is, en wat de eerste stap zou zijn.
     </p>
-    <a class="cta-link" href="https://www.businessdatasolutions.nl/">Plan een korte intake — businessdatasolutions.nl</a>
+    <a class="cta-link"
+       href="https://www.businessdatasolutions.nl/?utm_source=blog&amp;utm_medium=cta&amp;utm_campaign=synthese-mei-2026"
+       data-umami-event="cta-intake-click">Plan een korte intake — businessdatasolutions.nl</a>
   </section>
 
 </article>
@@ -1715,6 +1723,32 @@
   <p>Business Data Solutions · Witek ten Hove · <a href="https://www.businessdatasolutions.nl/">businessdatasolutions.nl</a></p>
   <p>Bronaankondigingen integraal beschikbaar via de YouTube-links in bijlages A, B en C.</p>
 </footer>
+
+<script>
+  // Scroll-depth tracking — meldt 25/50/75/100% bereikte leesdiepte aan Umami.
+  // Defensief: doet niets als Umami nog niet geladen of geblokkeerd is.
+  (function () {
+    var milestones = [25, 50, 75, 100];
+    var fired = {};
+    function check() {
+      var scrolled = window.scrollY + window.innerHeight;
+      var total = document.documentElement.scrollHeight;
+      if (total <= window.innerHeight) return;
+      var pct = Math.round((scrolled / total) * 100);
+      for (var i = 0; i < milestones.length; i++) {
+        var m = milestones[i];
+        if (pct >= m && !fired[m]) {
+          fired[m] = true;
+          if (window.umami && typeof window.umami.track === 'function') {
+            window.umami.track('scroll-' + m);
+          }
+        }
+      }
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('load', check);
+  })();
+</script>
 
 </body>
 </html>
